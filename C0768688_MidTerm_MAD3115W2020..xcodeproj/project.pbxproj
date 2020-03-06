@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42ABFE1024120F510075DC31 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE0F24120F510075DC31 /* Bill.swift */; };
+		42ABFE1224120F760075DC31 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE1124120F760075DC31 /* Internet.swift */; };
+		42ABFE1424120F8B0075DC31 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE1324120F8B0075DC31 /* Mobile.swift */; };
+		42ABFE1624120F970075DC31 /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE1524120F970075DC31 /* Hydro.swift */; };
+		42ABFE182412104C0075DC31 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE172412104C0075DC31 /* IDisplay.swift */; };
+		42ABFE1A2412105A0075DC31 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE192412105A0075DC31 /* Customer.swift */; };
+		42ABFE1E241210720075DC31 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE1D241210720075DC31 /* StringExtension.swift */; };
+		42ABFE202412107F0075DC31 /* Insurance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE1F2412107F0075DC31 /* Insurance.swift */; };
+		42ABFE242412173B0075DC31 /* CustomerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE232412173B0075DC31 /* CustomerList.swift */; };
+		42ABFE2624121DFA0075DC31 /* CustomerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE2524121DFA0075DC31 /* CustomerTableViewController.swift */; };
 		9BBE54422411E0F80015407A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE54412411E0F80015407A /* AppDelegate.swift */; };
 		9BBE54442411E0F80015407A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE54432411E0F80015407A /* SceneDelegate.swift */; };
 		9BBE54462411E0F80015407A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE54452411E0F80015407A /* ViewController.swift */; };
@@ -16,6 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42ABFE0F24120F510075DC31 /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		42ABFE1124120F760075DC31 /* Internet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		42ABFE1324120F8B0075DC31 /* Mobile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
+		42ABFE1524120F970075DC31 /* Hydro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
+		42ABFE172412104C0075DC31 /* IDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
+		42ABFE192412105A0075DC31 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		42ABFE1D241210720075DC31 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		42ABFE1F2412107F0075DC31 /* Insurance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insurance.swift; sourceTree = "<group>"; };
+		42ABFE232412173B0075DC31 /* CustomerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerList.swift; sourceTree = "<group>"; };
+		42ABFE2524121DFA0075DC31 /* CustomerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTableViewController.swift; sourceTree = "<group>"; };
 		9BBE543E2411E0F80015407A /* C0768688_MidTerm_MAD3115W2020..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0768688_MidTerm_MAD3115W2020..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBE54412411E0F80015407A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BBE54432411E0F80015407A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +57,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42ABFE0E24120C6B0075DC31 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				42ABFE172412104C0075DC31 /* IDisplay.swift */,
+				42ABFE1124120F760075DC31 /* Internet.swift */,
+				42ABFE1324120F8B0075DC31 /* Mobile.swift */,
+				42ABFE192412105A0075DC31 /* Customer.swift */,
+				42ABFE1D241210720075DC31 /* StringExtension.swift */,
+				42ABFE1F2412107F0075DC31 /* Insurance.swift */,
+				42ABFE1524120F970075DC31 /* Hydro.swift */,
+				42ABFE0F24120F510075DC31 /* Bill.swift */,
+				42ABFE232412173B0075DC31 /* CustomerList.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
 		9BBE54352411E0F80015407A = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +92,7 @@
 		9BBE54402411E0F80015407A /* C0768688_MidTerm_MAD3115W2020. */ = {
 			isa = PBXGroup;
 			children = (
+				42ABFE0E24120C6B0075DC31 /* classes */,
 				9BBE54412411E0F80015407A /* AppDelegate.swift */,
 				9BBE54432411E0F80015407A /* SceneDelegate.swift */,
 				9BBE54452411E0F80015407A /* ViewController.swift */,
@@ -63,6 +100,7 @@
 				9BBE544A2411E0FA0015407A /* Assets.xcassets */,
 				9BBE544C2411E0FA0015407A /* LaunchScreen.storyboard */,
 				9BBE544F2411E0FA0015407A /* Info.plist */,
+				42ABFE2524121DFA0075DC31 /* CustomerTableViewController.swift */,
 			);
 			path = C0768688_MidTerm_MAD3115W2020.;
 			sourceTree = "<group>";
@@ -138,9 +176,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42ABFE182412104C0075DC31 /* IDisplay.swift in Sources */,
+				42ABFE1624120F970075DC31 /* Hydro.swift in Sources */,
+				42ABFE2624121DFA0075DC31 /* CustomerTableViewController.swift in Sources */,
+				42ABFE202412107F0075DC31 /* Insurance.swift in Sources */,
+				42ABFE1024120F510075DC31 /* Bill.swift in Sources */,
 				9BBE54462411E0F80015407A /* ViewController.swift in Sources */,
 				9BBE54422411E0F80015407A /* AppDelegate.swift in Sources */,
+				42ABFE1424120F8B0075DC31 /* Mobile.swift in Sources */,
+				42ABFE242412173B0075DC31 /* CustomerList.swift in Sources */,
+				42ABFE1A2412105A0075DC31 /* Customer.swift in Sources */,
 				9BBE54442411E0F80015407A /* SceneDelegate.swift in Sources */,
+				42ABFE1E241210720075DC31 /* StringExtension.swift in Sources */,
+				42ABFE1224120F760075DC31 /* Internet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
