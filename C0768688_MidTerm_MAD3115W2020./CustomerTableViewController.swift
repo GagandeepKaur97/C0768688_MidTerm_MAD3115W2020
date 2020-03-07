@@ -41,7 +41,7 @@ class CustomerTableViewController: UITableViewController {
         let c = Customer.customerDetails[indexPath.row]
         cell?.textLabel?.text = c.fullName
         
-        index = indexPath.row
+
 
         // Configure the cell...
 
@@ -51,6 +51,8 @@ class CustomerTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
+    
+   
 
 
     /*
@@ -95,6 +97,15 @@ class CustomerTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if let destination = segue.destination as? NewCustomerVC{
+            destination.customerDelegate = self
+            if let tablecell = sender as? UITableViewCell{
+                let index = tableView.indexPath(for: tablecell)?.row
+                self.index = index!
+                destination.index = index!
+            }
+        }
         
         
     }

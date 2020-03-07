@@ -16,12 +16,20 @@ class NewCustomerVC: UIViewController {
     @IBOutlet weak var lastNametxt: UITextField!
     @IBOutlet weak var emailtxt: UITextField!
     var customerDelegate: CustomerTableViewController?
+    var index = -1
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if index >= 0 {
+            idtxt.text = "\(Customer.customerDetails[index].customerId)"
+            fistNametxt.text = Customer.customerDetails[index].firstName
+            lastNametxt.text = Customer.customerDetails[index].lastName
+            emailtxt.text = Customer.customerDetails[index].emailId
+        }
         
        
     }
