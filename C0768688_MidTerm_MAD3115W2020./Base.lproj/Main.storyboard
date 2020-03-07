@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--SIGN UP -->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="C0768688_MidTerm_MAD3115W2020_" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,7 +59,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VtC-2f-gNJ">
+                    <navigationItem key="navigationItem" title="SIGN UP " id="VtC-2f-gNJ">
                         <barButtonItem key="backBarButtonItem" title="logout" id="QRi-Wk-Ut5"/>
                         <barButtonItem key="rightBarButtonItem" title="login" id="nvb-3b-LI3">
                             <connections>
@@ -69,8 +69,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="SIGNUPbtn" destination="VtC-2f-gNJ" id="M07-Ve-yFZ"/>
                         <outlet property="namelbl" destination="2sF-iB-zVH" id="sce-M8-LT6"/>
                         <outlet property="paswwordlbl" destination="3ts-4D-xc4" id="SXy-3a-5RO"/>
+                        <outlet property="switchbtn" destination="a4s-Kb-OJC" id="jPy-n1-Tk7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

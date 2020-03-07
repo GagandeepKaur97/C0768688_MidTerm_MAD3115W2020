@@ -13,8 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var namelbl: UITextField!
     
     @IBOutlet weak var paswwordlbl: UITextField!
+    @IBOutlet weak var SIGNUPbtn: UINavigationItem!
     
-   
+    @IBOutlet weak var switchbtn: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
