@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var namelbl: UITextField!
     
     @IBOutlet weak var paswwordlbl: UITextField!
-    @IBOutlet weak var SIGNUPbtn: UINavigationItem!
+    
     
     @IBOutlet weak var switchbtn: UISwitch!
     
@@ -21,39 +21,28 @@ class ViewController: UIViewController {
         super.viewDidLoad()
        readPlistData()
     
-        for i in 1...5 {
-            let c = Clist(cname: "evneet\(i)", cpassword: "evneet\(i)")
-            Clist.list.append(c)
-        }
-        
-        
-        
-    }
-
-    @IBAction func logIn(_ sender: UIBarButtonItem) {
-        
-        
-       let name = namelbl.text
-       let password = paswwordlbl.text
-        
-        print("\(name)....")
-        print("\(password)......")
-        
       
-        if namelbl.text == "" && paswwordlbl.text == "" {
-            let alert = UIAlertController(title: "empty", message: "please fill the text", preferredStyle: .alert)
-            
-            let pkAction = UIAlertAction(title: "ok", style: .cancel, handler: nil)
-            
-            alert.addAction(pkAction)
-            
-            self.present(alert, animated: true, completion: nil)
-        }
-        else{
-            self.performSegue(withIdentifier: "customerVC", sender: UIBarButtonItem.self)
-        }
+        
         
     }
+    
+    
+    @IBAction func login(_ sender: UIBarButtonItem) {
+       
+        
+         let alert = UIAlertController(title: "ERROR", message: "PLEASE FILL THE REQUIRED FIELD", preferredStyle: .alert)
+        let okaction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        alert.addAction(okaction)
+        self.present(alert, animated: true, completion: nil)
+
+            print("ENTER VALID NAME AND PASSWORD")
+    let alertController = UIAlertController(title: "Login Failed", message:
+         "Enter valid Name and password", preferredStyle: .alert)
+     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+     self.present(alertController, animated: true, completion: nil)
+
+    
     
 }
 
@@ -102,3 +91,4 @@ class ViewController: UIViewController {
 
 
 
+}

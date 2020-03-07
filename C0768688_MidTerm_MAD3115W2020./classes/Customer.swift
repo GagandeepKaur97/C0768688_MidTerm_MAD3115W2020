@@ -33,14 +33,15 @@ enum CustomerNotFound {
         self.customerId       = customerId
         self.firstName        = firstName
         self.lastName         = lastName
-        if emailId.Emailvalidation() == true
-        {
-                self.emailId = emailId
-        }
-        else
-        {
-            self.emailId = "Invalid email id \(emailId)"
-        }
+        self.emailId = emailId
+//        if emailId.Emailvalidation() == true
+//        {
+//                self.emailId = emailId
+//        }
+//        else
+//        {
+//            self.emailId = "Invalid email id \(emailId)"
+//        }
                 
         
         

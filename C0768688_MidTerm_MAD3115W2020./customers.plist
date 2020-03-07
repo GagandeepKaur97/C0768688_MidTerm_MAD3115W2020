@@ -27,11 +27,12 @@
 				<key>password3</key>
 				<string>avani@123</string>
 				<key>New item</key>
-				<dict/>
-				<key>username4</key>
-				<string>kulvir</string>
-				<key>password4</key>
-				<string>kulvir@123</string>
+				<dict>
+					<key>username4</key>
+					<string>kulvir</string>
+					<key>password4</key>
+					<string>kulvir@123</string>
+				</dict>
 			</dict>
 		</dict>
 	</dict>
