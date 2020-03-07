@@ -36,15 +36,21 @@ class ViewController: UIViewController {
        let name = namelbl.text
        let password = paswwordlbl.text
         
-        if (name!.isEmpty && password!.isEmpty) {
-            let alert = UIAlertController(title: "Empty Fields", message: "Please Fill The Required Information", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+        print("\(name)....")
+        print("\(password)......")
+        
+      
+        if namelbl.text == "" && paswwordlbl.text == "" {
+            let alert = UIAlertController(title: "empty", message: "please fill the text", preferredStyle: .alert)
             
-            alert.addAction(okAction)
+            let pkAction = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+            
+            alert.addAction(pkAction)
+            
             self.present(alert, animated: true, completion: nil)
-        }else{
-            
-            
+        }
+        else{
+            self.performSegue(withIdentifier: "customerVC", sender: UIBarButtonItem.self)
         }
         
     }
@@ -66,7 +72,7 @@ class ViewController: UIViewController {
                 {
                     if user ["username"] == "Evneet" && user ["password"] == "Evneet@123"
                     
-                   /*    ||
+                      ||
                     user ["username1"] == "Gagan" && user ["password1"] == "Gagan@123"
                     
                     ||
@@ -76,7 +82,7 @@ class ViewController: UIViewController {
                      user ["username3"] == "avani" && user ["password3"] == "avani@123"
                         ||
                     
-                      user ["username4"] == "kulvir" && user ["password4"] == "kulvir@123"*/
+                      user ["username4"] == "kulvir" && user ["password4"] == "kulvir@123"
                         
                     {
                         flag = true
