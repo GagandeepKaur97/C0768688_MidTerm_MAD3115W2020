@@ -33,8 +33,8 @@ class ViewController: UIViewController {
     @IBAction func logIn(_ sender: UIBarButtonItem) {
         
         
-        var name = namelbl.text
-        var password = paswwordlbl.text
+       let name = namelbl.text
+       let password = paswwordlbl.text
         
         if (name!.isEmpty && password!.isEmpty) {
             let alert = UIAlertController(title: "Empty Fields", message: "Please Fill The Required Information", preferredStyle: .alert)
