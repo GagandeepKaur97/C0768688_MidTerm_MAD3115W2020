@@ -17,6 +17,7 @@ class NewCustomerVC: UIViewController {
     @IBOutlet weak var emailtxt: UITextField!
     var customerDelegate: CustomerTableViewController?
     var index = -1
+    
 
     
     override func viewDidLoad() {
@@ -42,7 +43,7 @@ class NewCustomerVC: UIViewController {
         let lastName = lastNametxt.text
         let email = emailtxt.text
         
-        if id!.isEmpty && fistName!.isEmpty && lastName!.isEmpty && email!.isEmpty{
+        if id!.isEmpty || fistName!.isEmpty || lastName!.isEmpty || email!.isEmpty{
             
             let alert = UIAlertController(title: "empty", message: nil, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)

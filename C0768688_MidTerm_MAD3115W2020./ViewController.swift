@@ -17,9 +17,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var switchbtn: UISwitch!
     
+    var validUser = false
+    
+    var clist = [String: String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        readPlistData()
+        
+        clist = ["evneet": "evneet@123","gagan": "gagan@123","kulvir": "kulvir@123"]
     
       
         
@@ -27,24 +33,40 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func login(_ sender: UIBarButtonItem) {
+    
+    @IBAction func signIn(_ sender: UIButton) {
+        
+        let name = namelbl.text
+               let password1 = paswwordlbl.text
+              
+               for (user,password) in clist {
+                   
+                   if name == user && password1 == password{
+                       validUser = true
+                       break
+                       
+                   }
+               }
+               
+               if !validUser {
+                 showAlert()
+               }else{
+                performSegue(withIdentifier: "customerList", sender: self)
+        }
+        }
+           
+    
+
+func showAlert(){
+       let alert = UIAlertController(title: "invalid", message: "jhgh", preferredStyle: .alert)
+       let ok = UIAlertAction(title: "ok", style: .cancel, handler: nil)
        
-        
-         let alert = UIAlertController(title: "ERROR", message: "PLEASE FILL THE REQUIRED FIELD", preferredStyle: .alert)
-        let okaction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        
-        alert.addAction(okaction)
-        self.present(alert, animated: true, completion: nil)
-
-            print("ENTER VALID NAME AND PASSWORD")
-    let alertController = UIAlertController(title: "Login Failed", message:
-         "Enter valid Name and password", preferredStyle: .alert)
-     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-     self.present(alertController, animated: true, completion: nil)
-
+       alert.addAction(ok)
+       self.present(alert, animated: true, completion: nil)
+   }
     
     
-}
+ 
 
     func readPlistData ()
     {
@@ -59,16 +81,12 @@ class ViewController: UIViewController {
                 var flag = false
                 for user in customersList
                 {
-                    if user ["username"] == "Evneet" && user ["password"] == "Evneet@123"
+                    if user ["username"] == "evneet" && user ["password"] == "evneet@123"
                     
                       ||
-                    user ["username1"] == "Gagan" && user ["password1"] == "Gagan@123"
+                    user ["username1"] == "gagan" && user ["password1"] == "gagan@123"
                     
-                    ||
-                            user ["username2"] == "charmi" && user ["password2"] == "charmi@123"
-                    
-                    ||
-                     user ["username3"] == "avani" && user ["password3"] == "avani@123"
+        
                         ||
                     
                       user ["username4"] == "kulvir" && user ["password4"] == "kulvir@123"
@@ -82,13 +100,20 @@ class ViewController: UIViewController {
                 }
                         else {
                             print("Invalid  User")
+                    let alert = UIAlertController(title: "hgdg", message: ";hd", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+                    
+                    alert.addAction(ok)
+                    self.present(alert, animated: true, completion: nil)
                         }
                     }
                 }
             }
     }
-
-
-
-
+    
 }
+
+
+
+
+

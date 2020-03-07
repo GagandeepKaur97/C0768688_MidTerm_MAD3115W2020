@@ -22,49 +22,45 @@
                                     <navigationItem title="SIGN UP" id="jV9-VW-yCK"/>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2sF-iB-zVH">
-                                <rect key="frame" x="30" y="178" width="354" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2sF-iB-zVH">
+                                <rect key="frame" x="30" y="178" width="359" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="paswword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ts-4D-xc4">
-                                <rect key="frame" x="30" y="262" width="354" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="paswword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ts-4D-xc4">
+                                <rect key="frame" x="30" y="262" width="359" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REMEMBER ME ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W39-rt-GKW">
-                                <rect key="frame" x="55" y="371.5" width="140" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REMEMBER ME ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W39-rt-GKW">
+                                <rect key="frame" x="55" y="371.5" width="132" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4s-Kb-OJC">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4s-Kb-OJC">
                                 <rect key="frame" x="227" y="366" width="51" height="31"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxi-Yv-c6O">
-                                <rect key="frame" x="186" y="472" width="43" height="30"/>
+                                <rect key="frame" x="162" y="467" width="105" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SignIn"/>
+                                <color key="backgroundColor" red="0.52091377973556519" green="0.75951308012008667" blue="0.91217046976089478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <state key="normal" title="SignIn">
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="uAk-OR-qrr" kind="show" id="OGd-Yi-qrr"/>
+                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9If-lA-K1i"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a4s-Kb-OJC" secondAttribute="trailing" constant="140" id="Bdd-Fb-o9J"/>
-                            <constraint firstItem="2sF-iB-zVH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="IMt-l2-VNU"/>
-                            <constraint firstItem="3ts-4D-xc4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Jk8-65-69o"/>
-                            <constraint firstItem="a4s-Kb-OJC" firstAttribute="leading" secondItem="W39-rt-GKW" secondAttribute="trailing" constant="30" id="Joy-3b-Roz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="W39-rt-GKW" secondAttribute="bottom" constant="470" id="NmX-EQ-IOQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2sF-iB-zVH" secondAttribute="trailing" constant="30" id="Xna-zd-XqJ"/>
-                            <constraint firstItem="2sF-iB-zVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fC2-y2-dSK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ts-4D-xc4" secondAttribute="trailing" constant="30" id="qaE-s8-K8K"/>
-                            <constraint firstItem="W39-rt-GKW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="rCU-Za-1Vz"/>
-                            <constraint firstItem="3ts-4D-xc4" firstAttribute="top" secondItem="2sF-iB-zVH" secondAttribute="bottom" constant="50" id="rN2-24-BtD"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="SIGN UP " id="VtC-2f-gNJ"/>
@@ -72,6 +68,7 @@
                         <outlet property="namelbl" destination="2sF-iB-zVH" id="sce-M8-LT6"/>
                         <outlet property="paswwordlbl" destination="3ts-4D-xc4" id="SXy-3a-5RO"/>
                         <outlet property="switchbtn" destination="a4s-Kb-OJC" id="jPy-n1-Tk7"/>
+                        <segue destination="uAk-OR-qrr" kind="show" identifier="customerList" id="AfM-L3-EVm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,7 +100,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bak-Ze-bYa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="CustomerCell" id="kJc-8D-gOS">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -112,6 +109,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="370" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.52091377973556519" green="0.75951308012008667" blue="0.91217046976089478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="bfY-It-Wmp" kind="show" trigger="accessoryAction" id="uoB-zs-h2F"/>
                                 </connections>
@@ -123,8 +121,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="l9W-K0-kOe">
-                        <barButtonItem key="backBarButtonItem" title="LOG OUT" id="Rwi-F3-lph"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Rwi-F3-lph"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.crop.circle.fill.badge.checkmark" catalog="system" id="Joy-ej-sMA">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <segue destination="bfY-It-Wmp" kind="show" id="p62-YJ-JJX"/>
                             </connections>
@@ -162,8 +161,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV9-lb-ScE">
-                                <rect key="frame" x="191" y="504" width="32" height="30"/>
+                                <rect key="frame" x="174" y="500" width="67" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.52091377973556519" green="0.75951308012008667" blue="0.91217046976089478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="ADD"/>
                                 <connections>
                                     <action selector="addCustomer:" destination="bfY-It-Wmp" eventType="touchUpInside" id="3L6-t0-TRe"/>
@@ -176,7 +177,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="kQJ-yx-nSR"/>
                     </view>
                     <navigationItem key="navigationItem" id="JTx-8d-VHo"/>
