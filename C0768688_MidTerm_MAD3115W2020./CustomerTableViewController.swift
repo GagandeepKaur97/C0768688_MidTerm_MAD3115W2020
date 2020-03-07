@@ -59,6 +59,15 @@ class CustomerTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, success) in
+            
+            self.customers.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        return UISwipeActionsConfiguration(actions: [delAction])
+    }
+    
    
 
 
