@@ -27,7 +27,11 @@ class singletonData
     }
     func loadData()
     {
+        customers.updateValue(Customer(customerId: "C1", firstName: "Evneet", lastName: "kaur", emailId: "evneet123@gmail.com"), forKey: "C1")
+        customers.updateValue(Customer(customerId: "C2", firstName: "Gagan", lastName: "kaur", emailId: "gagan123@mail.com"), forKey: "C2")
+        customers.updateValue(Customer(customerId: "C3", firstName: "charmi", lastName: "patel", emailId: "charmi123@gmail.com"), forKey: "C3")
+        customers.updateValue(Customer(customerId: "C4", firstName: "Avani", lastName: "patel", emailId: "avani123@gmail.com"), forKey: "C4")
+        customers.updateValue(Customer(customerId: "C5", firstName: "kulvir", lastName: "kaur", emailId: "kulvir123@gmail.com"), forKey: "C5")
 
-
-}
+     }
 }

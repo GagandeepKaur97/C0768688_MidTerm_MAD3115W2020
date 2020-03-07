@@ -53,7 +53,7 @@ class NewCustomerVC: UIViewController {
             
         }
         
-        let c = Customer(customerId: Int(id!) ?? 0, firstName: fistName!, lastName: lastName!, emailId: email!)
+        let c = Customer(customerId: id!, firstName: fistName!, lastName: lastName!, emailId: email!)
         
         Customer.customerDetails.append(c)
         

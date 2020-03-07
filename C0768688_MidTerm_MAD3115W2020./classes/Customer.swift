@@ -13,7 +13,7 @@ enum CustomerNotFound {
     case EmailIdInvailid , MobileNumberInvalid
 }
 
-    var customerId : Int
+    var customerId : String
     var firstName  : String
     var lastName   : String
     var fullName   : String
@@ -22,12 +22,12 @@ enum CustomerNotFound {
     }
     var emailId    : String
     var totalAmountToPay: Double = 0
-    var billsDictionary = [Int: [Bill]]()
+//    var billsDictionary = [Int: [Bill]]()
     var bills = [Bill]()
     
    public static var customerDetails = [Customer]()
     
-    init(customerId : Int ,firstName  : String,lastName   : String   ,emailId    : String)
+    init(customerId : String ,firstName  : String,lastName   : String   ,emailId    : String)
         
       {
         self.customerId       = customerId
@@ -50,12 +50,12 @@ enum CustomerNotFound {
         
     }
     
-    func addBill(bill: Bill){
-        bills.append(bill)
-        billsDictionary.updateValue(bills, forKey: customerId)
-       
-    }
-    
+//    func addBill(bill: Bill){
+//        bills.append(bill)
+//        billsDictionary.updateValue(bills, forKey: customerId)
+//
+//    }
+//
     func calculateTotalBill()-> Double
     {
 
@@ -90,18 +90,18 @@ enum CustomerNotFound {
         }
        // print("   totalAmountToPay  :  ")
         
-        if billsDictionary.count == 0
-        {
-            print("       Customer has no bill")
-            print("***************************************************")
-            
-        }
-        else
-        {
-            
-            print("       Total Bill Amount to pay :\(calculateTotalBill())" )
-            print("***************************************************")
-        }
+//        if billsDictionary.count == 0
+//        {
+//            print("       Customer has no bill")
+//            print("***************************************************")
+//            
+//        }
+//        else
+//        {
+//            
+//            print("       Total Bill Amount to pay :\(calculateTotalBill())" )
+//            print("***************************************************")
+//        }
         
         
     }
