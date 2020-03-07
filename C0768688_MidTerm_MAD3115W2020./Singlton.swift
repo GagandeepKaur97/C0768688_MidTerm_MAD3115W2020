@@ -13,5 +13,21 @@ class singletonData
     private static let datasingleton_instance = singletonData()
     private lazy var customers: [String: Customer] = [:]
     private init(){}
+    static func getInstance() -> singletonData
+    {
+      return datasingleton_instance
+    }
+     
+    func addCustomer(customer: Customer)
+    {
+        self.customers.updateValue(customer, forKey: customer.customerId)
+    }
+    func getAllCustomers() -> [Customer]{
+      return Array(customers.values)
+    }
+    func loadData()
+    {
 
+
+}
 }
