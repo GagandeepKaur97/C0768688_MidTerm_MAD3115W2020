@@ -19,8 +19,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+       readPlistData()
+    
         for i in 1...5 {
             let c = Clist(cname: "evneet\(i)", cpassword: "evneet\(i)")
             Clist.list.append(c)
@@ -49,4 +49,49 @@ class ViewController: UIViewController {
     }
     
 }
+
+    func readPlistData ()
+    {
+     if let bundlepath =   Bundle.main.path(forResource: "customers", ofType: "plist")
+        {
+          //  print(bundlepath)
+         if   let dictionary = NSMutableDictionary(contentsOfFile: bundlepath)
+         {
+           
+            if let userList = dictionary["users"] as? [[String:String]]
+            {
+                var flag = false
+                for user in userList
+                {
+                    if user ["username"] == "Evneet" && user ["password"] == "Evneet@123"
+                    
+                        ||
+                    user ["username"] == "Gagan" && user ["password"] == "Gagan@123"
+                    
+                    ||
+                            user ["username"] == "charmi" && user ["password"] == "charmi@123"
+                    
+                    ||
+                     user ["username"] == "avani" && user ["password"] == "avani@123"
+                        ||
+                    
+                      user ["username"] == "kulvir" && user ["password"] == "kulvir@123"
+                        
+                    {
+                        flag = true
+                    }
+                }
+                if flag == true {
+                   print("Valid User")
+                }
+                        else {
+                            print("Invalid  User")
+                        }
+                    }
+                }
+            }
+    }
+
+
+
 
