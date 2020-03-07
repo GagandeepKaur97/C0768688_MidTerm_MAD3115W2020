@@ -11,11 +11,12 @@ import UIKit
 class NewCustomerVC: UIViewController {
     
     
-    @IBOutlet weak var idtxt: UITextField!
-    @IBOutlet weak var fistNametxt: UITextField!
-    @IBOutlet weak var lastNametxt: UITextField!
-    @IBOutlet weak var emailtxt: UITextField!
-    var customerDelegate: CustomerTableViewController?
+    @IBOutlet weak var idtxt       : UITextField!
+    @IBOutlet weak var firstNametxt: UITextField!
+    @IBOutlet weak var lastNametxt : UITextField!
+    @IBOutlet weak var emailtxt    : UITextField!
+    var customerDelegate           : CustomerTableViewController?
+    
     var index = -1
     
 
@@ -25,12 +26,6 @@ class NewCustomerVC: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        if index >= 0 {
-            idtxt.text = "\(Customer.customerDetails[index].customerId)"
-            fistNametxt.text = Customer.customerDetails[index].firstName
-            lastNametxt.text = Customer.customerDetails[index].lastName
-            emailtxt.text = Customer.customerDetails[index].emailId
-        }
         
        
     }
@@ -38,12 +33,12 @@ class NewCustomerVC: UIViewController {
     
     @IBAction func addCustomer(_ sender: UIButton) {
         
-        let id = idtxt.text
-        let fistName = fistNametxt.text
-        let lastName = lastNametxt.text
-        let email = emailtxt.text
+        let id        = idtxt.text
+        let firstName = firstNametxt.text
+        let lastName  = lastNametxt.text
+        let email     = emailtxt.text
         
-        if id!.isEmpty || fistName!.isEmpty || lastName!.isEmpty || email!.isEmpty{
+        if id!.isEmpty || firstName!.isEmpty || lastName!.isEmpty || email!.isEmpty{
             
             let alert = UIAlertController(title: "empty", message: nil, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -53,14 +48,12 @@ class NewCustomerVC: UIViewController {
             
         }
         
-        let c = Customer(customerId: id!, firstName: fistName!, lastName: lastName!, emailId: email!)
+        singletonData.getInstance().addCustomer(customer: Customer(customerId: id!, firstName: firstName!, lastName: lastName!, emailId: email!))
         
-        Customer.customerDetails.append(c)
-        
-        idtxt.text = ""
-        fistNametxt.text = ""
-        lastNametxt.text = ""
-        emailtxt.text = ""
+        idtxt.text        = ""
+        firstNametxt.text = ""
+        lastNametxt.text  = ""
+        emailtxt.text     = ""
         
         
     }

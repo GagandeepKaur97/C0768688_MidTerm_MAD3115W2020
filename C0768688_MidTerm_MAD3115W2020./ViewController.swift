@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     
 
 func showAlert(){
-       let alert = UIAlertController(title: "invalid", message: "jhgh", preferredStyle: .alert)
+       let alert = UIAlertController(title: "INVALID", message: "PLEASE ENTER THE VALID USERNAME AND PASSWORD", preferredStyle: .alert)
        let ok = UIAlertAction(title: "ok", style: .cancel, handler: nil)
        
        alert.addAction(ok)

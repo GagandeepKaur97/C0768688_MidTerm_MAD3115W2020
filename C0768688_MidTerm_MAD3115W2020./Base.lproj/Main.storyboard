@@ -111,7 +111,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.52091377973556519" green="0.75951308012008667" blue="0.91217046976089478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="bfY-It-Wmp" kind="show" trigger="accessoryAction" id="uoB-zs-h2F"/>
+                                    <segue destination="bwt-gT-HqN" kind="show" trigger="accessoryAction" id="pDG-rE-U3x"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -183,7 +183,7 @@
                     <navigationItem key="navigationItem" id="JTx-8d-VHo"/>
                     <connections>
                         <outlet property="emailtxt" destination="4lW-PW-11J" id="xcv-19-l7x"/>
-                        <outlet property="fistNametxt" destination="Pm2-JR-E53" id="UXI-e7-Q97"/>
+                        <outlet property="firstNametxt" destination="Pm2-JR-E53" id="EMS-bG-c4E"/>
                         <outlet property="idtxt" destination="yvt-uU-eOd" id="d1T-Gq-VLz"/>
                         <outlet property="lastNametxt" destination="Nz6-yN-7g1" id="mQh-Ch-CaZ"/>
                     </connections>
@@ -192,11 +192,24 @@
             </objects>
             <point key="canvasLocation" x="2576.811594202899" y="-162.05357142857142"/>
         </scene>
+        <!--CustomerBillDetails-->
+        <scene sceneID="DtR-Hx-7CZ">
+            <objects>
+                <viewController id="bwt-gT-HqN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="98P-hY-G32">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="0j0-EK-VVM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CustomerBillDetails" id="yC6-lj-8pW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SoL-pM-1kq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="571"/>
+        </scene>
     </scenes>
     <resources>
         <image name="person.crop.circle.fill.badge.checkmark" catalog="system" width="64" height="50"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="p62-YJ-JJX"/>
-    </inferredMetricsTieBreakers>
 </document>

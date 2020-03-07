@@ -23,6 +23,7 @@ class singletonData
         self.customers.updateValue(customer, forKey: customer.customerId)
     }
     func getAllCustomers() -> [Customer]{
+        loadData()
       return Array(customers.values)
     }
     func loadData()

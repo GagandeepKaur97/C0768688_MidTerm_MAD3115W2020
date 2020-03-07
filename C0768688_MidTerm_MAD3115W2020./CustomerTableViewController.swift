@@ -11,6 +11,7 @@ import UIKit
 class CustomerTableViewController: UITableViewController {
     
     var index = -1
+    var customers: [Customer] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,12 @@ class CustomerTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        customers = singletonData.getInstance().getAllCustomers()
+        
+        for c in customers {
+            print(c.fullName)
+        }
+        
     }
 
     // MARK: - Table view data source
@@ -31,15 +38,14 @@ class CustomerTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Customer.customerDetails.count
+        return customers.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
         
-        let c = Customer.customerDetails[indexPath.row]
-        cell?.textLabel?.text = c.fullName
+        cell?.textLabel?.text = customers[indexPath.row].fullName
         
 
 
@@ -49,6 +55,7 @@ class CustomerTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+         customers = singletonData.getInstance().getAllCustomers()
         tableView.reloadData()
     }
     
