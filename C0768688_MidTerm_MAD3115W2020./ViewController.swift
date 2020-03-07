@@ -44,6 +44,7 @@ class ViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }else{
             
+            
         }
         
     }
@@ -54,28 +55,28 @@ class ViewController: UIViewController {
     {
      if let bundlepath =   Bundle.main.path(forResource: "customers", ofType: "plist")
         {
-          //  print(bundlepath)
+          
          if   let dictionary = NSMutableDictionary(contentsOfFile: bundlepath)
          {
            
-            if let userList = dictionary["users"] as? [[String:String]]
+            if let customersList = dictionary["customers"] as? [[String:String]]
             {
                 var flag = false
-                for user in userList
+                for user in customersList
                 {
                     if user ["username"] == "Evneet" && user ["password"] == "Evneet@123"
                     
-                        ||
-                    user ["username"] == "Gagan" && user ["password"] == "Gagan@123"
+                   /*    ||
+                    user ["username1"] == "Gagan" && user ["password1"] == "Gagan@123"
                     
                     ||
-                            user ["username"] == "charmi" && user ["password"] == "charmi@123"
+                            user ["username2"] == "charmi" && user ["password2"] == "charmi@123"
                     
                     ||
-                     user ["username"] == "avani" && user ["password"] == "avani@123"
+                     user ["username3"] == "avani" && user ["password3"] == "avani@123"
                         ||
                     
-                      user ["username"] == "kulvir" && user ["password"] == "kulvir@123"
+                      user ["username4"] == "kulvir" && user ["password4"] == "kulvir@123"*/
                         
                     {
                         flag = true
