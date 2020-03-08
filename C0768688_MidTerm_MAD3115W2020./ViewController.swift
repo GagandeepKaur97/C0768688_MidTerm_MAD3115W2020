@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-      readPlistData()
+
         
         clist = ["evneet": "evneet@123","gagan": "gagan@123","kulvir": "kulvir@123"]
     
@@ -69,58 +69,17 @@ func showAlert(){
    }
     
     
- 
-
-  func readPlistData ()
-    {
-     if let bundlepath =   Bundle.main.path(forResource: "customers", ofType: "plist")
-        {
-          
-         if   let dictionary = NSMutableDictionary(contentsOfFile: bundlepath)
-         {
-           
-            if let customersList = dictionary["customers"] as? [[String:String]]
-            {
-                var flag = false
-                for user in customersList
-                {
-                    if user ["username"] == "evneet" && user ["password"] == "evneet@123"
-                    
-                      ||
-                    user ["username1"] == "gagan" && user ["password1"] == "gagan@123"
-                    
-        
-                        ||
-                    
-                      user ["username4"] == "kulvir" && user ["password4"] == "kulvir@123"
-                        
-                    {
-                        flag = true
-                    }
-                }
-                if flag == true {
-                   print("Valid User")
-                }
-                        else {
-                            print("Invalid  User")
-                let alert = UIAlertController(title: "hgdg", message: ";hd", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "ok", style: .cancel, handler: nil)
-                    
-                    alert.addAction(ok)
-                    
-                    self.present(alert, animated: true, completion: nil)
-                        }
-                    }
-    }
-    }
-   }
+}
     
-    @IBAction func unwindToVC(_ unwindSegue: UIStoryboardSegue) {
+    
+   
+    
+func unwindToVC(_ unwindSegue: UIStoryboardSegue) {
         _ = unwindSegue.source
         // Use data from the view controller which initiated the unwind segue
     }
     
-}
+
 
 
 
