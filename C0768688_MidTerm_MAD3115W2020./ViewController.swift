@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       readPlistData()
+      readPlistData()
         
         clist = ["evneet": "evneet@123","gagan": "gagan@123","kulvir": "kulvir@123"]
     
@@ -66,7 +66,7 @@ func showAlert(){
     
  
 
-    func readPlistData ()
+  func readPlistData ()
     {
      if let bundlepath =   Bundle.main.path(forResource: "customers", ofType: "plist")
         {
@@ -107,7 +107,7 @@ func showAlert(){
                     }
                 }
             }
-    }
+   }
     
     @IBAction func unwindToVC(_ unwindSegue: UIStoryboardSegue) {
         let sourceViewController = unwindSegue.source
