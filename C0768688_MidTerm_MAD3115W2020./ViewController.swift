@@ -28,9 +28,7 @@ class ViewController: UIViewController {
         clist = ["evneet": "evneet@123","gagan": "gagan@123","kulvir": "kulvir@123"]
     
       
-        
-        
-    }
+        }
     
     
     

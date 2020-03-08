@@ -27,10 +27,10 @@ class NewCustomerVC: UIViewController {
         // Do any additional setup after loading the view.
         
         if index >= 0{
-            idtxt.text = customerDelegate?.customers[index].customerId
+            idtxt.text        = customerDelegate?.customers[index].customerId
             firstNametxt.text = customerDelegate?.customers[index].firstName
-            lastNametxt.text = customerDelegate?.customers[index].lastName
-            emailtxt.text = customerDelegate?.customers[index].emailId
+            lastNametxt.text  = customerDelegate?.customers[index].lastName
+            emailtxt.text     = customerDelegate?.customers[index].emailId
         }
         
         
@@ -47,7 +47,7 @@ class NewCustomerVC: UIViewController {
         
         if id!.isEmpty || firstName!.isEmpty || lastName!.isEmpty || email!.isEmpty{
             
-            let alert = UIAlertController(title: "empty", message: nil, preferredStyle: .alert)
+            let alert    = UIAlertController(title: "empty", message: nil, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             
             alert.addAction(okAction)
