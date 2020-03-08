@@ -202,14 +202,22 @@
                         <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="0j0-EK-VVM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="CustomerBillDetails" id="yC6-lj-8pW"/>
+                    <navigationItem key="navigationItem" title="CustomerBillDetails" id="yC6-lj-8pW">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="house.fill" catalog="system" id="Ia2-QI-mzO">
+                            <connections>
+                                <segue destination="csJ-ij-9tY" kind="unwind" unwindAction="unwindToVC:" id="Gw9-Dc-gjK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoL-pM-1kq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="csJ-ij-9tY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1958" y="571"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="person.crop.circle.fill.badge.checkmark" catalog="system" width="64" height="50"/>
     </resources>
 </document>

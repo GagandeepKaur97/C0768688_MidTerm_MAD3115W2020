@@ -1,8 +1,8 @@
 //
 //  Customer.swift
-//  MAD3004_W2020_MidTerm
+//  C0768688_MidTerm_MAD3115W2020.
 //
-//  Created by Gagandeep kaur on 2020-02-13.
+//  Created by Evneet kaur on 2020-03-07.
 //  Copyright © 2020 MacStudent. All rights reserved.
 //
 
@@ -20,10 +20,10 @@ enum CustomerNotFound {
     {
         return "\(firstName) \(lastName)"
     }
-    var emailId    : String
+    var emailId         : String
     var totalAmountToPay: Double = 0
-//    var billsDictionary = [Int: [Bill]]()
-    var bills = [Bill]()
+    var billsDictionary = [Int: [Bill]]()
+    var bills           = [Bill]()
     
    public static var customerDetails = [Customer]()
     
@@ -33,20 +33,15 @@ enum CustomerNotFound {
         self.customerId       = customerId
         self.firstName        = firstName
         self.lastName         = lastName
-        self.emailId = emailId
-//        if emailId.Emailvalidation() == true
-//        {
-//                self.emailId = emailId
-//        }
-//        else
-//        {
-//            self.emailId = "Invalid email id \(emailId)"
-//        }
-                
         
-        
-        
-
+        if emailId.Emailvalidation() == true
+        {
+                self.emailId = emailId
+        }
+        else
+        {
+            self.emailId = "Invalid email id \(emailId)"
+        }
         
     }
     
@@ -55,18 +50,14 @@ enum CustomerNotFound {
 //        billsDictionary.updateValue(bills, forKey: customerId)
 //
 //    }
-//
+    
     func calculateTotalBill()-> Double
     {
 
-//        for i in billsDictionary{
-//
-//
-//            totalAmountToPay = totalAmountToPay + i.value.totalBillAmount
-//
-//        }
+    
+       
         for item in bills {
-            totalAmountToPay = totalAmountToPay + item.totalBillAmount
+            totalAmountToPay = totalAmountToPay + Double(item.totalBillAmount)
         }
         return totalAmountToPay
     }
@@ -74,8 +65,6 @@ enum CustomerNotFound {
     {
         
         print("CustomerId        :\(self.customerId  )")
-        //print("  \t firstName         :\(self.firstName   )")
-        //print("  \t lastName          :\(self.lastName    )")
         print("FullName          :\(self.fullName   )")
         print("EmailId           :\(String(describing: self.emailId)   )")
         
@@ -90,44 +79,44 @@ enum CustomerNotFound {
         }
        // print("   totalAmountToPay  :  ")
         
-//        if billsDictionary.count == 0
-//        {
-//            print("       Customer has no bill")
-//            print("***************************************************")
-//            
-//        }
-//        else
-//        {
-//            
-//            print("       Total Bill Amount to pay :\(calculateTotalBill())" )
-//            print("***************************************************")
-//        }
+        if billsDictionary.count == 0
+        {
+            print("       Customer has no bill")
+            print("***************************************************")
+            
+        }
+        else
+        {
+            
+            print("       Total Bill Amount to pay :\(calculateTotalBill())" )
+            print("***************************************************")
+        }
         
         
     }
     
-    func findBill(for id :Int){
-        var billid : Int
-        var exixt = false
-        
-        for item in bills {
-            billid = item.billId
-            if billid == id{
-                print("***************************************************")
-                print("--------------------Bill Details-------------------")
-                item.Display()
-                print("***************************************************")
-                exixt = true
-                break
-            }
-        }
-        
-        if !exixt{
-            print("***************************************************")
-            print("         No bill found with given index...........")
-            print("***************************************************")
-        }
-    }
-    
+//    func findBill(for id :Int){
+//        var billid : Int
+//        var exixt = false
+//        
+//        for item in bills {
+//            billid = item.billId
+//            if billid == id{
+//                print("***************************************************")
+//                print("--------------------Bill Details-------------------")
+//                item.Display()
+//                print("***************************************************")
+//                exixt = true
+//                break
+//            }
+//        }
+//        
+//        if !exixt{
+//            print("***************************************************")
+//            print("         No bill found with given index...........")
+//            print("***************************************************")
+//        }
+//    }
+//    
    
 }
