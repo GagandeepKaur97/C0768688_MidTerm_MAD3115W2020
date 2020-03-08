@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     var clist = [String: String]()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
       readPlistData()
         
@@ -56,6 +57,7 @@ class ViewController: UIViewController {
     
 
 func showAlert(){
+    
        let alert = UIAlertController(title: "INVALID", message: "PLEASE ENTER THE VALID USERNAME AND PASSWORD", preferredStyle: .alert)
        let ok = UIAlertAction(title: "ok", style: .cancel, handler: nil)
        
