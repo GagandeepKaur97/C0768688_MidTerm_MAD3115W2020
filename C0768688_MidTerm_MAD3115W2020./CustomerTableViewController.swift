@@ -55,6 +55,7 @@ class CustomerTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
          customers = singletonData.getInstance().getAllCustomers()
         tableView.reloadData()
     }
