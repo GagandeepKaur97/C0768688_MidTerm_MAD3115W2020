@@ -98,10 +98,11 @@ func showAlert(){
                 }
                         else {
                             print("Invalid  User")
-                    let alert = UIAlertController(title: "hgdg", message: ";hd", preferredStyle: .alert)
-                    let ok = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+                let alert = UIAlertController(title: "hgdg", message: ";hd", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "ok", style: .cancel, handler: nil)
                     
                     alert.addAction(ok)
+                    
                     self.present(alert, animated: true, completion: nil)
                         }
                     }
