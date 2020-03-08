@@ -206,7 +206,7 @@
                     <navigationItem key="navigationItem" title="CustomerBillDetails" id="yC6-lj-8pW">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="house.fill" catalog="system" id="Ia2-QI-mzO">
                             <connections>
-                                <segue destination="csJ-ij-9tY" kind="unwind" unwindAction="unwindToVC:" id="Gw9-Dc-gjK"/>
+                                <segue destination="csJ-ij-9tY" kind="unwind" unwindAction="unwindToVC:" id="3a1-IY-TlL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
