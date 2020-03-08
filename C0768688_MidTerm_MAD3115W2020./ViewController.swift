@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         
-        clist = ["evneet": "evneet@123","gagan": "gagan@123","kulvir": "kulvir@123"]
+        clist =  ["evneet": "evneet@123","gagan": "gagan@123","kulvir": "kulvir@123"]
     
       
         }
