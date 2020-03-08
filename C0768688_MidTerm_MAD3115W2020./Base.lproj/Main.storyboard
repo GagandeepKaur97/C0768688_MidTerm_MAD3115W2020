@@ -111,7 +111,8 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.52091377973556519" green="0.75951308012008667" blue="0.91217046976089478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="bwt-gT-HqN" kind="show" trigger="accessoryAction" id="pDG-rE-U3x"/>
+                                    <segue destination="bwt-gT-HqN" kind="show" id="4RH-nm-pMd"/>
+                                    <segue destination="bfY-It-Wmp" kind="show" trigger="accessoryAction" id="ufX-K9-411"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -220,4 +221,7 @@
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="person.crop.circle.fill.badge.checkmark" catalog="system" width="64" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ufX-K9-411"/>
+    </inferredMetricsTieBreakers>
 </document>

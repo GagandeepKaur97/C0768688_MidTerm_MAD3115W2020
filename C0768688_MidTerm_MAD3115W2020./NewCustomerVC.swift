@@ -26,6 +26,13 @@ class NewCustomerVC: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        if index >= 0{
+            idtxt.text = customerDelegate?.customers[index].customerId
+            firstNametxt.text = customerDelegate?.customers[index].firstName
+            lastNametxt.text = customerDelegate?.customers[index].lastName
+            emailtxt.text = customerDelegate?.customers[index].emailId
+        }
+        
         
        
     }
