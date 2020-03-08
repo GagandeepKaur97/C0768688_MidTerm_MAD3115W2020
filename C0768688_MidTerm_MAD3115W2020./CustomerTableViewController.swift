@@ -115,16 +115,21 @@ class CustomerTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         
         if let destination = segue.destination as? NewCustomerVC{
+            
             destination.customerDelegate = self
+            
             if let tablecell = sender as? UITableViewCell{
+                
                 let index = tableView.indexPath(for: tablecell)?.row
+                
                 self.index = index!
+                
                 destination.index = index!
             }
         }
         
         
-    }
+        }
 
 
 }
