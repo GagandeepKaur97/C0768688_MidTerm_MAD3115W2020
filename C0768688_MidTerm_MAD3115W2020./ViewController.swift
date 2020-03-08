@@ -45,10 +45,13 @@ class ViewController: UIViewController {
                        break
                        
                    }
+                validUser = false
                }
                
                if !validUser {
+                validUser = false
                  showAlert()
+                
                }else{
                 performSegue(withIdentifier: "customerList", sender: self)
         }
