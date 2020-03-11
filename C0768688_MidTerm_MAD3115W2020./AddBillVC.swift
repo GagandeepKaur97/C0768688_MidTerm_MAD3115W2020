@@ -14,12 +14,14 @@ class AddBillVC: UIViewController {
     @IBOutlet weak var billDateTxtFld: UITextField!
     @IBOutlet weak var billTypeTxtFld: UITextField!
     
+    @IBOutlet weak var billTypeSegLbl: UISegmentedControl!
     @IBOutlet weak var datePickerLbl: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         datePickerLbl.isHidden = true
+        billTypeSegLbl.isHidden = true
         
     }
     
@@ -48,16 +50,26 @@ class AddBillVC: UIViewController {
         billDateTxtFld.text = startDate
     }
     
-
-    @IBAction func dateTxtFldAction(_ sender: Any) {
-        
     
-        
-          datePickerLbl.isHidden = false
+    
+    @IBAction func billTypeAction(_ sender: Any) {
     }
     
-    
+
+    @IBAction func dateTxtFldAction(_ sender: Any) {
+          datePickerLbl.isHidden = false
+    }
     @IBAction func editend(_ sender: Any) {
         datePickerLbl.isHidden = true
     }
+    
+    
+    
+    @IBAction func billTypeTouchDown(_ sender: Any) {
+        billTypeSegLbl.isHidden = false
+    }
+    @IBAction func billtypeEditEnd(_ sender: Any) {
+        billTypeSegLbl.isHidden = true
+    }
+    
 }

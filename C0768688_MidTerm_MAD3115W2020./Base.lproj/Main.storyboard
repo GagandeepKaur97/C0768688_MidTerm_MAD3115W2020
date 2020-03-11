@@ -288,6 +288,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="billTypeTouchDown:" destination="s6N-Sg-ib8" eventType="touchDown" id="sM4-cd-AUn"/>
+                                    <action selector="billtypeEditEnd:" destination="s6N-Sg-ib8" eventType="editingDidEnd" id="J5S-4y-6bq"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iif-O1-lcI">
                                 <rect key="frame" x="30" y="301" width="355" height="34"/>
@@ -301,10 +305,24 @@
                                     <action selector="datepicker:" destination="s6N-Sg-ib8" eventType="valueChanged" id="nwB-8B-RIQ"/>
                                 </connections>
                             </datePicker>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kfh-AE-1Dc">
+                                <rect key="frame" x="40" y="702" width="334" height="32"/>
+                                <segments>
+                                    <segment title="Hydro"/>
+                                    <segment title="Mobile"/>
+                                    <segment title="Internet"/>
+                                </segments>
+                                <connections>
+                                    <action selector="billTypeAction:" destination="s6N-Sg-ib8" eventType="valueChanged" id="se8-7I-U0l"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="GwK-4o-Wbk" firstAttribute="bottom" secondItem="Kfh-AE-1Dc" secondAttribute="bottom" constant="80" id="1zb-QS-InV"/>
+                            <constraint firstItem="GwK-4o-Wbk" firstAttribute="trailing" secondItem="Kfh-AE-1Dc" secondAttribute="trailing" constant="40" id="2mn-zZ-VgJ"/>
                             <constraint firstItem="7ZF-k6-FqI" firstAttribute="leading" secondItem="h6v-P1-Z9o" secondAttribute="leading" constant="10" id="Brl-hA-6gm"/>
+                            <constraint firstItem="Kfh-AE-1Dc" firstAttribute="leading" secondItem="GwK-4o-Wbk" secondAttribute="leading" constant="40" id="XQQ-bF-YZn"/>
                             <constraint firstItem="GwK-4o-Wbk" firstAttribute="trailing" secondItem="7ZF-k6-FqI" secondAttribute="trailing" constant="10" id="dDm-4P-AcZ"/>
                             <constraint firstItem="GwK-4o-Wbk" firstAttribute="bottom" secondItem="7ZF-k6-FqI" secondAttribute="bottom" constant="10" id="mYx-JT-ciw"/>
                         </constraints>
@@ -314,6 +332,7 @@
                     <connections>
                         <outlet property="billDateTxtFld" destination="2G2-4e-whK" id="hpd-n0-ig4"/>
                         <outlet property="billIdTxtFld" destination="TJh-T0-gfW" id="9qH-1e-vYY"/>
+                        <outlet property="billTypeSegLbl" destination="Kfh-AE-1Dc" id="nTk-bf-KiI"/>
                         <outlet property="billTypeTxtFld" destination="fDk-yN-RrQ" id="o5b-T6-lra"/>
                         <outlet property="datePickerLbl" destination="7ZF-k6-FqI" id="HlX-Ra-XCP"/>
                     </connections>
