@@ -53,14 +53,20 @@ class NewCustomerVC: UIViewController {
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
             
+        }else{
+            
+            singletonData.getInstance().addCustomer(customer: Customer(customerId: id!, firstName: firstName!, lastName: lastName!, emailId: email!))
+            
+            idtxt.text        = ""
+            firstNametxt.text = ""
+            lastNametxt.text  = ""
+            emailtxt.text     = ""
+            
+                   
+            
         }
         
-        singletonData.getInstance().addCustomer(customer: Customer(customerId: id!, firstName: firstName!, lastName: lastName!, emailId: email!))
-        
-        idtxt.text        = ""
-        firstNametxt.text = ""
-        lastNametxt.text  = ""
-        emailtxt.text     = ""
+       
         
         
     }
