@@ -126,6 +126,7 @@ class CustomerTableViewController: UITableViewController {
                 self.index = index!
                 
                 destination.index = index!
+            
             }
         }
         

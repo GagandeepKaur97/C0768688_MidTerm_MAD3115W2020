@@ -15,6 +15,7 @@ class NewCustomerVC: UIViewController {
     @IBOutlet weak var firstNametxt: UITextField!
     @IBOutlet weak var lastNametxt : UITextField!
     @IBOutlet weak var emailtxt    : UITextField!
+    @IBOutlet weak var addBtn: UIButton!
     var customerDelegate           : CustomerTableViewController?
     
     var index = -1
@@ -31,6 +32,8 @@ class NewCustomerVC: UIViewController {
             firstNametxt.text = customerDelegate?.customers[index].firstName
             lastNametxt.text  = customerDelegate?.customers[index].lastName
             emailtxt.text     = customerDelegate?.customers[index].emailId
+            
+            addBtn.isHidden = true
         }
         
         

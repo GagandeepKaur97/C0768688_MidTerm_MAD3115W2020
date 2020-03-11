@@ -183,6 +183,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="JTx-8d-VHo"/>
                     <connections>
+                        <outlet property="addBtn" destination="eV9-lb-ScE" id="IBO-ET-Qzz"/>
                         <outlet property="emailtxt" destination="4lW-PW-11J" id="xcv-19-l7x"/>
                         <outlet property="firstNametxt" destination="Pm2-JR-E53" id="EMS-bG-c4E"/>
                         <outlet property="idtxt" destination="yvt-uU-eOd" id="d1T-Gq-VLz"/>
