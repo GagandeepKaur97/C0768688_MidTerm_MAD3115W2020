@@ -217,8 +217,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RJF-KW-2zX">
-                                <rect key="frame" x="20" y="108" width="374" height="685"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RJF-KW-2zX">
+                                <rect key="frame" x="20" y="106" width="374" height="685"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -340,6 +340,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8Z-r3-yBk">
+                                <rect key="frame" x="177" y="587" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -354,6 +359,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jzT-Ja-CDh"/>
                     <connections>
+                        <outlet property="ADDbtn" destination="o8Z-r3-yBk" id="HVS-uR-PKG"/>
                         <outlet property="billDateTxtFld" destination="2G2-4e-whK" id="hpd-n0-ig4"/>
                         <outlet property="billIdTxtFld" destination="TJh-T0-gfW" id="9qH-1e-vYY"/>
                         <outlet property="billTypeSegLbl" destination="Kfh-AE-1Dc" id="nTk-bf-KiI"/>
