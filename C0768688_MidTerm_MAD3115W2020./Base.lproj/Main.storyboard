@@ -212,30 +212,74 @@
         <!--CustomerBillDetails-->
         <scene sceneID="DtR-Hx-7CZ">
             <objects>
-                <viewController id="bwt-gT-HqN" sceneMemberID="viewController">
+                <viewController id="bwt-gT-HqN" customClass="CustomerBillDetailsVC" customModule="C0768688_MidTerm_MAD3115W2020_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="98P-hY-G32">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RJF-KW-2zX">
+                                <rect key="frame" x="20" y="108" width="374" height="685"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RJF-KW-2zX" firstAttribute="leading" secondItem="0j0-EK-VVM" secondAttribute="leading" constant="20" id="Jfv-3O-zgZ"/>
+                            <constraint firstItem="0j0-EK-VVM" firstAttribute="trailing" secondItem="RJF-KW-2zX" secondAttribute="trailing" constant="20" id="TAJ-x4-wN1"/>
+                            <constraint firstItem="0j0-EK-VVM" firstAttribute="bottom" secondItem="RJF-KW-2zX" secondAttribute="bottom" constant="20" id="t2P-gs-yTI"/>
+                            <constraint firstItem="RJF-KW-2zX" firstAttribute="top" secondItem="0j0-EK-VVM" secondAttribute="top" constant="20" id="udg-N3-vjh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0j0-EK-VVM"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="CustomerBillDetails" id="yC6-lj-8pW">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="house.fill" catalog="system" id="Ia2-QI-mzO">
-                            <connections>
-                                <segue destination="csJ-ij-9tY" kind="unwind" unwindAction="unwindToVC:" id="3a1-IY-TlL"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="house.fill" catalog="system" id="Ia2-QI-mzO">
+                                <connections>
+                                    <segue destination="csJ-ij-9tY" kind="unwind" unwindAction="unwindToVC:" id="3a1-IY-TlL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="plus.rectangle.fill.on.rectangle.fill" catalog="system" id="c9z-xo-peU">
+                                <connections>
+                                    <segue destination="s6N-Sg-ib8" kind="show" id="hQD-DA-beP"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="billDetailsTxtView" destination="RJF-KW-2zX" id="Dkm-tG-2Hg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoL-pM-1kq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="csJ-ij-9tY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1958" y="571"/>
         </scene>
+        <!--Add BillVC-->
+        <scene sceneID="0Xk-zE-CGO">
+            <objects>
+                <viewController id="s6N-Sg-ib8" customClass="AddBillVC" customModule="C0768688_MidTerm_MAD3115W2020_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h6v-P1-Z9o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="GwK-4o-Wbk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jzT-Ja-CDh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDN-au-yJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2930" y="568"/>
+        </scene>
     </scenes>
     <resources>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="person.crop.circle.fill.badge.checkmark" catalog="system" width="64" height="50"/>
+        <image name="plus.rectangle.fill.on.rectangle.fill" catalog="system" width="64" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ufX-K9-411"/>
