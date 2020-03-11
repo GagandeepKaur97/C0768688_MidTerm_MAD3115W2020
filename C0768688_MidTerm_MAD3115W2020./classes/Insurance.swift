@@ -11,10 +11,10 @@ import Foundation
 class Insurance : Bill
 {
     var InsuranceProviderName : String
-    var TypeOfInsurance : String
-    var StartDate : Date
-    var EndDate : Date
-    var TotalDays : Int
+    var TypeOfInsurance       : String
+    var StartDate             : Date
+    var EndDate               : Date
+    var TotalDays             : Int
     var TotalInstallmentToPay : Double
     
     init (  billId : Int , billDate : Date , billType : String ,InsuranceProviderName : String ,TypeOfInsurance : String , StartDate : Date ,EndDate : Date ,TotalDays : Int ,TotalInstallmentToPay : Double)
