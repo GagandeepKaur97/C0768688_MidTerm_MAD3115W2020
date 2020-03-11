@@ -10,10 +10,17 @@ import UIKit
 
 class AddBillVC: UIViewController {
 
+    @IBOutlet weak var billIdTxtFld: UITextField!
+    @IBOutlet weak var billDateTxtFld: UITextField!
+    @IBOutlet weak var billTypeTxtFld: UITextField!
+    
+    @IBOutlet weak var datePickerLbl: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        datePickerLbl.isHidden = true
+        
     }
     
 
@@ -26,5 +33,31 @@ class AddBillVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func datepicker(_ sender: Any) {
+        
+        print("inside date............................")
+        
+      
+        
+        let dateFormatter = DateFormatter()
 
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let startDate = dateFormatter.string(from: datePickerLbl.date)
+        billDateTxtFld.text = startDate
+    }
+    
+
+    @IBAction func dateTxtFldAction(_ sender: Any) {
+        
+    
+        
+          datePickerLbl.isHidden = false
+    }
+    
+    
+    @IBAction func editend(_ sender: Any) {
+        datePickerLbl.isHidden = true
+    }
 }
