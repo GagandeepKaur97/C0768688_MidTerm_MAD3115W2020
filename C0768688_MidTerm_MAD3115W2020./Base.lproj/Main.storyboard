@@ -293,8 +293,26 @@
                                     <action selector="billtypeEditEnd:" destination="s6N-Sg-ib8" eventType="editingDidEnd" id="J5S-4y-6bq"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iif-O1-lcI">
-                                <rect key="frame" x="30" y="301" width="355" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="txt1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iif-O1-lcI">
+                                <rect key="frame" x="28" y="310" width="355" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="txt2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="916-XI-kWV">
+                                <rect key="frame" x="28" y="374" width="355" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="txt3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPi-V6-VtM">
+                                <rect key="frame" x="28" y="431" width="355" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="txt5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fo7-kd-mxc">
+                                <rect key="frame" x="28" y="545" width="355" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -316,6 +334,12 @@
                                     <action selector="billTypeAction:" destination="s6N-Sg-ib8" eventType="valueChanged" id="se8-7I-U0l"/>
                                 </connections>
                             </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="txt4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVn-lJ-MSR">
+                                <rect key="frame" x="28" y="490" width="355" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -335,6 +359,11 @@
                         <outlet property="billTypeSegLbl" destination="Kfh-AE-1Dc" id="nTk-bf-KiI"/>
                         <outlet property="billTypeTxtFld" destination="fDk-yN-RrQ" id="o5b-T6-lra"/>
                         <outlet property="datePickerLbl" destination="7ZF-k6-FqI" id="HlX-Ra-XCP"/>
+                        <outlet property="txtFeild1" destination="Iif-O1-lcI" id="580-mI-jVm"/>
+                        <outlet property="txtFeild2" destination="916-XI-kWV" id="bql-IZ-mPI"/>
+                        <outlet property="txtFeild3" destination="CPi-V6-VtM" id="gJt-CE-Bsy"/>
+                        <outlet property="txtFeild4" destination="jVn-lJ-MSR" id="FxR-Oq-usL"/>
+                        <outlet property="txtFeild5" destination="fo7-kd-mxc" id="wde-P7-F2c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDN-au-yJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
