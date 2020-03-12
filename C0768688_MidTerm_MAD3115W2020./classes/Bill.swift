@@ -30,11 +30,20 @@ class Bill     :   IDisplay {
     }
     
     
-    func Display() {
+    func Display() -> String {
+        
+        var s = "\t BillId                    : \(self.billId)\n"
+        s += "\t BillDate                  : \(self.billDate)\n"
+        s += "\t BillType                  : \(self.billType)\n"
+        s += "\t TotalBillAmount           : $\(self.totalBillAmount)\n"
+        
+        
          print("\t BillId                    : \(self.billId)")
         print("\t BillDate                  : \(self.billDate)")
          print("\t BillType                  : \(self.billType)")
          print("\t TotalBillAmount           : $\(self.totalBillAmount)")
+        
+        return s
     }
     
 }

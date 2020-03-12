@@ -30,7 +30,7 @@ class Insurance : Bill
     super.init (billId , billDate, billType)
 
     }
-    override func Display()
+    override func Display() -> String
     {
         super.Display()
     print(" \t InsuranceProviderName : \(self.InsuranceProviderName)")
@@ -39,6 +39,7 @@ class Insurance : Bill
     print(" \t EndDate               : \(self.EndDate) ")
     print(" \t TotalDays             : \(self.TotalDays) ")
     print(" \t TotalInstallmentToPay :\(self.TotalInstallmentToPay) ")
+        return ""
 
     }
 }

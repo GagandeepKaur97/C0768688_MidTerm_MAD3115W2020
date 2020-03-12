@@ -22,12 +22,17 @@ class Hydro : Bill
         super.init(billId, billDate, billType )
         self.totalBillAmount = Double(unitConsumed) * 0.30
     }
-    override func Display()
+    override func Display() ->String
     {
-        super.Display()
+        var s = super.Display() + "\n"
+        s += " \t AgencyName                :\(self.agencyName)\n"
+        s += " \t UnitConsumed              :\(self.unitConsumed ) units \n"
+        s += "*************************************************** \n"
+        
         
         print(" \t AgencyName                :\(self.agencyName)")
         print(" \t UnitConsumed              :\(self.unitConsumed ) units")
         print("***************************************************")
+        return s
     }
 }

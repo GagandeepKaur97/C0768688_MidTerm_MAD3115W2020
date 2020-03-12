@@ -33,8 +33,19 @@ class Mobile : Bill
         
     }
     
-    override func Display()
+    override func Display() ->String
     {
+        
+        var s =  super.Display() + "\n"
+        
+        s += "\t MobileManufacturerName    : \(self.mobileManufacturerName)\n"
+        s += "\t PlanName                  : \(self.planName)\n"
+        s += "\t MobileNumber              : \(String(describing: self.mobileNumber))\n"
+        s += "\t InternetGbUsed            : \(self.internetGbUsed)GB \n"
+        s += "\t MinuteUsed                : \(self.minuteUsed) minutes \n"
+        s += "*************************************************** \n"
+        
+        
         super.Display()
         print("\t MobileManufacturerName    : \(self.mobileManufacturerName)")
         print("\t PlanName                  : \(self.planName)")
@@ -42,6 +53,8 @@ class Mobile : Bill
         print("\t InternetGbUsed            : \(self.internetGbUsed)GB")
         print("\t MinuteUsed                : \(self.minuteUsed) minutes")
         print("***************************************************")
+        
+        return s
         
     }
 }

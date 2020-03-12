@@ -9,6 +9,8 @@
 import Foundation
 
 class Customer : IDisplay{
+    
+    
 enum CustomerNotFound {
     case EmailIdInvailid , MobileNumberInvalid
 }
@@ -61,8 +63,14 @@ enum CustomerNotFound {
         }
         return totalAmountToPay
     }
-   func Display()
+   func Display()-> String
     {
+        
+        var s = "CustomerId        :\(self.customerId  )\n"
+        s += "FullName          :\(self.fullName   )\n"
+        s += "EmailId           :\(String(describing: self.emailId)   )\n"
+        s += " _________Bill Information_______ \n"
+        s += "*************************************************** \n"
         
         print("CustomerId        :\(self.customerId  )")
         print("FullName          :\(self.fullName   )")
@@ -75,24 +83,31 @@ enum CustomerNotFound {
    // i.value.Display()
       }
         for item in bills {
+            
+            s += item.Display() + "\n"
             item.Display()
         }
+        s += "   totalAmountToPay  :  \n"
+        
        print("   totalAmountToPay  :  ")
         
         if billsDictionary.count == 0
         {
+            s += "       Customer has no bill \n"
+            s += "*************************************************** \n"
             print("       Customer has no bill")
             print("***************************************************")
             
         }
         else
         {
-            
+            s += "       Total Bill Amount to pay :\(calculateTotalBill())\n"
+            s += "*************************************************** \n"
             print("       Total Bill Amount to pay :\(calculateTotalBill())" )
             print("***************************************************")
         }
         
-        
+        return s
     }
     
    func findBill(for id :Int){

@@ -226,7 +226,8 @@ class AddBillVC: UIViewController {
 //    }
 //
     override func viewWillDisappear(_ animated: Bool) {
-        delegCBD!.billDetailsTxtView.text = "\(c!.Display())"
+        let  str = c?.Display()
+        delegCBD!.billDetailsTxtView.text = str!
                
     }
     
