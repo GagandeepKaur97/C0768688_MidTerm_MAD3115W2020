@@ -17,7 +17,7 @@ class Insurance : Bill
     var TotalDays             : Int
     var TotalInstallmentToPay : Double
     
-    init (  billId : Int , billDate : Date , billType : String ,InsuranceProviderName : String ,TypeOfInsurance : String , StartDate : Date ,EndDate : Date ,TotalDays : Int ,TotalInstallmentToPay : Double)
+    init (  billId : Int , billDate : String , billType : String ,InsuranceProviderName : String ,TypeOfInsurance : String , StartDate : Date ,EndDate : Date ,TotalDays : Int ,TotalInstallmentToPay : Double)
 
     {
         self.InsuranceProviderName = InsuranceProviderName

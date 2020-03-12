@@ -217,11 +217,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RJF-KW-2zX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJF-KW-2zX">
                                 <rect key="frame" x="20" y="106" width="374" height="685"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -257,7 +255,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoL-pM-1kq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="csJ-ij-9tY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1958" y="571"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="570.53571428571422"/>
         </scene>
         <!--Add BillVC-->
         <scene sceneID="0Xk-zE-CGO">
@@ -327,8 +325,8 @@
                                 <rect key="frame" x="40" y="702" width="334" height="32"/>
                                 <segments>
                                     <segment title="Hydro"/>
-                                    <segment title="Mobile"/>
                                     <segment title="Internet"/>
+                                    <segment title="Mobile"/>
                                 </segments>
                                 <connections>
                                     <action selector="billTypeAction:" destination="s6N-Sg-ib8" eventType="valueChanged" id="se8-7I-U0l"/>
@@ -340,10 +338,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8Z-r3-yBk">
-                                <rect key="frame" x="177" y="587" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-TQ-If4">
+                                <rect key="frame" x="150" y="622" width="114" height="30"/>
+                                <state key="normal" title="ADD BILL"/>
+                                <connections>
+                                    <action selector="addBill:" destination="s6N-Sg-ib8" eventType="touchUpInside" id="v8o-rI-FH5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -354,12 +354,14 @@
                             <constraint firstItem="Kfh-AE-1Dc" firstAttribute="leading" secondItem="GwK-4o-Wbk" secondAttribute="leading" constant="40" id="XQQ-bF-YZn"/>
                             <constraint firstItem="GwK-4o-Wbk" firstAttribute="trailing" secondItem="7ZF-k6-FqI" secondAttribute="trailing" constant="10" id="dDm-4P-AcZ"/>
                             <constraint firstItem="GwK-4o-Wbk" firstAttribute="bottom" secondItem="7ZF-k6-FqI" secondAttribute="bottom" constant="10" id="mYx-JT-ciw"/>
+                            <constraint firstItem="GwK-4o-Wbk" firstAttribute="trailing" secondItem="ee8-TQ-If4" secondAttribute="trailing" constant="150" id="mlR-9D-UEC"/>
+                            <constraint firstItem="Kfh-AE-1Dc" firstAttribute="top" secondItem="ee8-TQ-If4" secondAttribute="bottom" constant="50" id="oho-YB-8lu"/>
+                            <constraint firstItem="ee8-TQ-If4" firstAttribute="leading" secondItem="GwK-4o-Wbk" secondAttribute="leading" constant="150" id="wE5-kW-dlh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GwK-4o-Wbk"/>
                     </view>
                     <navigationItem key="navigationItem" id="jzT-Ja-CDh"/>
                     <connections>
-                        <outlet property="ADDbtn" destination="o8Z-r3-yBk" id="HVS-uR-PKG"/>
                         <outlet property="billDateTxtFld" destination="2G2-4e-whK" id="hpd-n0-ig4"/>
                         <outlet property="billIdTxtFld" destination="TJh-T0-gfW" id="9qH-1e-vYY"/>
                         <outlet property="billTypeSegLbl" destination="Kfh-AE-1Dc" id="nTk-bf-KiI"/>

@@ -120,14 +120,21 @@ class CustomerTableViewController: UITableViewController {
             destination.customerDelegate = self
             
             if let tablecell = sender as? UITableViewCell{
-                
                 let index = tableView.indexPath(for: tablecell)?.row
-                
                 self.index = index!
-                
                 destination.index = index!
-            
             }
+        }
+        
+        if let dest = segue.destination as? CustomerBillDetailsVC{
+            dest.delegateCTBV = self
+            
+            if let cell = sender as? UITableViewCell{
+                let index = tableView.indexPath(for: cell)?.row
+                dest.selectcustomer = customers[index!]
+            }
+    
+            
         }
         
         
