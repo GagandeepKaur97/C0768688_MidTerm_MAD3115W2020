@@ -28,6 +28,10 @@ class BillDetailTVC: UITableViewController {
         
         for item in bill {
             print("\(item.billType)")
+            print("\(item.billId)")
+            print(item.billDate)
+            print("\(item.totalBillAmount)")
+            print("******************************")
         }
 
         // Uncomment the following line to preserve selection between presentations
@@ -51,13 +55,19 @@ class BillDetailTVC: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "billDetail")
-        cell?.textLabel?.text = "BILL ID: \(bill[indexPath.row].billId)"
-        cell?.detailTextLabel?.text = "total :\(bill[indexPath.row].calculateTotalBill())"
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "billDetail") as! CustomerTableViewcellDVc
+        
+        cell.billId.text = "\(bill[indexPath.row].billId)"
+        
+        cell.billDate.text = bill[indexPath.row].billDate
+        cell.billAmmount.text = "\(bill[indexPath.row].totalBillAmount)"
+        
+        
+        
+        
         // Configure the cell...
 
-        return cell!
+        return cell
     }
     
 
@@ -105,5 +115,9 @@ class BillDetailTVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
 
 }
