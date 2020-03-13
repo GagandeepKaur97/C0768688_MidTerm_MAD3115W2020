@@ -53,11 +53,11 @@ class singletonData
    var mob1 = Mobile(billId: 1, billDate: "12 jan 2019", billType: "Mobile", mobileManufacturerName:"Samsung" , planName: "FiullTime", mobileNumber: "1234567890", internetGbUsed: 5, minuteUsed: 250)
 
 var mob2 = Mobile(billId: 2, billDate: "12 jan 2019", billType: "Mobile", mobileManufacturerName:"sung" , planName: "FullTime talk", mobileNumber: "1234567768", internetGbUsed: 7, minuteUsed: 560)
-var i1 = Internet(billId: 1, billDate: "6 feb 2018", billType: "Internet", providerName: "jndjfn", internetGbUsed: 600)
-var i2 = Internet(billId: 2, billDate: "8 march", billType: "Internet", providerName: "dfds", internetGbUsed: 600)
-var i3 = Internet(billId: 3, billDate: "4 march", billType: "Internet", providerName: "fdsf", internetGbUsed: 600)
-var h1 = Hydro(billId: 1, billDate: "9 feb", billType: "Hydro", agencyName: "jbj", unitConsumed: 60)
-var h2 = Hydro(billId: 2, billDate: "4 jan", billType: "Hydro", agencyName: "jbjdcs", unitConsumed: 40)
+var i1 = Internet(billId: 1, billDate: "6 feb 2018", billType: "Internet", providerName: "freedom", internetGbUsed: 600)
+var i2 = Internet(billId: 2, billDate: "8 march", billType: "Internet", providerName: "bell", internetGbUsed: 600)
+var i3 = Internet(billId: 3, billDate: "4 march", billType: "Internet", providerName: "rogers", internetGbUsed: 600)
+var h1 = Hydro(billId: 1, billDate: "9 feb", billType: "Hydro", agencyName: "galaxy ", unitConsumed: 60)
+var h2 = Hydro(billId: 2, billDate: "4 jan", billType: "Hydro", agencyName: "samsung galaxy", unitConsumed: 40)
 
     func loadData()
     {
@@ -69,10 +69,10 @@ var h2 = Hydro(billId: 2, billDate: "4 jan", billType: "Hydro", agencyName: "jbj
         c1.addBill(bill: h1)
         
         c2.addBill(bill: mob2)
-        c2.addBill(bill: i2)
+        c2.addBill(bill: h2)
         
         c3.addBill(bill: h1)
-        c3.addBill(bill: h2)
+        c3.addBill(bill: i2)
         
         c4.addBill(bill: i3)
         
