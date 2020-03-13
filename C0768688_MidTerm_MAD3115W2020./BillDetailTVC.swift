@@ -12,10 +12,11 @@ class BillDetailTVC: UITableViewController {
     
     var deleCTBC: CustomerTableViewController?
     
+    @IBOutlet weak var total: UILabel!
     
-    @IBOutlet weak var idlbl: UILabel!
-    @IBOutlet weak var datelbl: UILabel!
-    @IBOutlet weak var amountlbl: UILabel!
+    
+    
+    
     
     
     var cust : Customer?
@@ -24,7 +25,9 @@ class BillDetailTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bill =  (cust?.getAllbills())!
+        bill =  (cust!.getAllbills())
+        total.text = "    Total Bill Ammount:  $\(cust!.calculateTotalBill())"
+        
         
         for item in bill {
             print("\(item.billType)")
@@ -61,6 +64,7 @@ class BillDetailTVC: UITableViewController {
         
         cell.billDate.text = bill[indexPath.row].billDate
         cell.billAmmount.text = "\(bill[indexPath.row].totalBillAmount)"
+        cell.billtypelbl.text = bill[indexPath.row].billType
         
         
         
@@ -119,5 +123,13 @@ class BillDetailTVC: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(150.0)
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//           return CGFloat(200.0)
+//       }
 
 }

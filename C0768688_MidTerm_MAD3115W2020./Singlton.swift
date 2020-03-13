@@ -13,17 +13,22 @@ class singletonData
     private static let datasingleton_instance = singletonData()
     private lazy var customers: [String: Customer] = [:]
     private init(){}
+   
+    
     static func getInstance() -> singletonData
     {
       return datasingleton_instance
     }
      
+    
     func addCustomer(customer: Customer)
     {
         self.customers.updateValue(customer, forKey: customer.customerId)
     }
+   
+    
     func getAllCustomers() -> [Customer]{
-        loadData()
+        
       return Array(customers.values)
     }
 
@@ -45,7 +50,7 @@ class singletonData
 
 
 
-var mob1 = Mobile(billId: 1, billDate: "12 jan 2019", billType: "Mobile", mobileManufacturerName:"Samsung" , planName: "FiullTime", mobileNumber: "1234567890", internetGbUsed: Int(5.0), minuteUsed: 250)
+   var mob1 = Mobile(billId: 1, billDate: "12 jan 2019", billType: "Mobile", mobileManufacturerName:"Samsung" , planName: "FiullTime", mobileNumber: "1234567890", internetGbUsed: Int(5.0), minuteUsed: 250)
 
 var mob2 = Mobile(billId: 2, billDate: "12 jan 2019", billType: "Mobile", mobileManufacturerName:"sung" , planName: "FullTime talk", mobileNumber: "1234567768", internetGbUsed: Int(7.0), minuteUsed: 560)
 var i1 = Internet(billId: 1, billDate: "6 feb 2018", billType: "Internet", providerName: "jndjfn", internetGbUsed: Int(600.0))

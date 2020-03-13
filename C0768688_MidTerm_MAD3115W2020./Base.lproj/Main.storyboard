@@ -217,41 +217,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eSh-yv-3vc">
+                            <rect key="frame" x="0.0" y="233" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="billDetail" rowHeight="174" id="Z1W-CH-4qF" customClass="CustomerTableViewcellDVc" customModule="C0768688_MidTerm_MAD3115W2020_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="174"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="15" reuseIdentifier="billDetail" rowHeight="177" id="Z1W-CH-4qF" customClass="CustomerTableViewcellDVc" customModule="C0768688_MidTerm_MAD3115W2020_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="177"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z1W-CH-4qF" id="0pF-xe-lrI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="174"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="177"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BillId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHb-Rt-GfW">
-                                            <rect key="frame" x="38" y="21" width="135" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BillId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHb-Rt-GfW">
+                                            <rect key="frame" x="38" y="16" width="336" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BillDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcZ-aN-kJ2">
-                                            <rect key="frame" x="38" y="68" width="195" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BillDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcZ-aN-kJ2">
+                                            <rect key="frame" x="40" y="52" width="334" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BillAmmount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwb-0h-JYP">
-                                            <rect key="frame" x="38" y="124" width="195" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BillAmmount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwb-0h-JYP">
+                                            <rect key="frame" x="40" y="88" width="334" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="billtype" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USE-XG-nxI">
+                                            <rect key="frame" x="40" y="114" width="334" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="USE-XG-nxI" secondAttribute="trailing" constant="20" id="1u3-tb-rxS"/>
+                                        <constraint firstItem="USE-XG-nxI" firstAttribute="leading" secondItem="0pF-xe-lrI" secondAttribute="leadingMargin" constant="20" id="3hb-Ll-rU9"/>
+                                        <constraint firstItem="Mwb-0h-JYP" firstAttribute="top" secondItem="qcZ-aN-kJ2" secondAttribute="bottom" constant="15" id="4uw-eE-Snc"/>
+                                        <constraint firstItem="qcZ-aN-kJ2" firstAttribute="top" secondItem="QHb-Rt-GfW" secondAttribute="bottom" constant="15" id="C5A-rK-aVb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="qcZ-aN-kJ2" secondAttribute="trailing" constant="20" id="Uf2-mt-c7D"/>
+                                        <constraint firstItem="QHb-Rt-GfW" firstAttribute="top" secondItem="0pF-xe-lrI" secondAttribute="topMargin" constant="5" id="nkl-DC-loi"/>
+                                        <constraint firstItem="QHb-Rt-GfW" firstAttribute="leading" secondItem="0pF-xe-lrI" secondAttribute="leadingMargin" constant="18" id="pIg-MR-rVc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QHb-Rt-GfW" secondAttribute="trailing" constant="20" id="pfV-Ik-Vsd"/>
+                                        <constraint firstItem="Mwb-0h-JYP" firstAttribute="leading" secondItem="0pF-xe-lrI" secondAttribute="leadingMargin" constant="20" id="rxK-wp-oMb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Mwb-0h-JYP" secondAttribute="trailing" constant="20" id="yd7-bm-kJg"/>
+                                        <constraint firstItem="qcZ-aN-kJ2" firstAttribute="leading" secondItem="0pF-xe-lrI" secondAttribute="leadingMargin" constant="20" id="z3d-Ij-H8l"/>
+                                        <constraint firstItem="USE-XG-nxI" firstAttribute="top" secondItem="Mwb-0h-JYP" secondAttribute="bottom" constant="5" id="zXp-eO-2w5"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="billAmmount" destination="Mwb-0h-JYP" id="Qxt-es-noq"/>
                                     <outlet property="billDate" destination="qcZ-aN-kJ2" id="GMz-wr-o4x"/>
                                     <outlet property="billId" destination="QHb-Rt-GfW" id="TcW-Pm-q6N"/>
+                                    <outlet property="billtypelbl" destination="USE-XG-nxI" id="yyp-OQ-xUX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -267,6 +292,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="total" destination="eSh-yv-3vc" id="pJx-yB-8bW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ydj-Wr-J23" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

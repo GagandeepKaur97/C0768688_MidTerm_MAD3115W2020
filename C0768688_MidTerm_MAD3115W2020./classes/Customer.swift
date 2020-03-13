@@ -66,11 +66,7 @@ enum CustomerNotFound {
     
     func getAllbills() -> [Bill]
        {
-           var allBills = [Bill] ()
-           for bill in bills {
-               allBills.append(bill)
-           }
-           return allBills
+           return bills
            
        }
 //   func Display()-> String

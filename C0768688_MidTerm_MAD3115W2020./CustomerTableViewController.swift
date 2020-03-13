@@ -132,6 +132,7 @@ class CustomerTableViewController: UITableViewController {
             if let cell = sender as? UITableViewCell{
                 let index = tableView.indexPath(for: cell)?.row
                 dest.cust = customers[index!]
+                dest.bill = []
             }
     
             

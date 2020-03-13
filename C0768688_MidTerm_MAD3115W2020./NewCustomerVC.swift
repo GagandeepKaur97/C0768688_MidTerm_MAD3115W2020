@@ -34,6 +34,10 @@ class NewCustomerVC: UIViewController {
             emailtxt.text     = customerDelegate?.customers[index].emailId
             
             addBtn.isHidden = true
+            idtxt.isEnabled = false
+            firstNametxt.isEnabled = false
+            lastNametxt.isEnabled = false
+            emailtxt.isEnabled = false
         }
         
         

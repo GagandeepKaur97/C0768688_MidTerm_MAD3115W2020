@@ -18,5 +18,6 @@ class CustomerTableViewcellDVc: UITableViewCell {
     @IBOutlet weak var billAmmount: UILabel!
     
    
-
+    @IBOutlet weak var billtypelbl: UILabel!
+    
 }
