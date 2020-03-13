@@ -75,7 +75,7 @@ class AddBillVC: UIViewController {
             
             if agency!.isEmpty && unit!.isEmpty{
                 
-                showAlert()
+                showAlert(message: "Empty feilds")
                 
             }else{
                  h = Hydro(billId: Int(id!)!, billDate: date!, billType: type!, agencyName: agency!, unitConsumed: Int(unit!)!)
@@ -86,7 +86,7 @@ class AddBillVC: UIViewController {
             let gb = txtFeild2.text
             
             if provider!.isEmpty && gb!.isEmpty{
-                showAlert()
+                showAlert(message: "Empty feilds")
             }else{
 
                 i = Internet(billId: Int(id!)!, billDate: date!, billType: type!, providerName: provider!, internetGbUsed: Int(gb!)!)
@@ -102,13 +102,21 @@ class AddBillVC: UIViewController {
             let minute = txtFeild5.text
             
             if manufacturer!.isEmpty && plan!.isEmpty && mobile!.isEmpty && gbused!.isEmpty && minute!.isEmpty{
-                showAlert()
+                showAlert(message: "Empty feilds")
             }else{
                 
-
-                m = Mobile(billId: Int(id!)!, billDate: date!, billType: type!, mobileManufacturerName: manufacturer!, planName: plan!, mobileNumber: mobile!, internetGbUsed: Int(gbused!)!, minuteUsed: Int(minute!)!)
-                c?.addBill(bill: m!)
+                if txtFeild3.text?.mobilevalidation() == false{
+                    showAlert(message: "Invalid mobile number")
+                }else{
+                    
+                    m = Mobile(billId: Int(id!)!, billDate: date!, billType: type!, mobileManufacturerName: manufacturer!, planName: plan!, mobileNumber: mobile!, internetGbUsed: Int(gbused!)!, minuteUsed: Int(minute!)!)
+                                   c?.addBill(bill: m!)
+                                   
+                    
+                }
                 
+
+               
             }
             
         default:
@@ -212,9 +220,9 @@ class AddBillVC: UIViewController {
         billTypeSegLbl.isHidden = true
     }
     
-    func showAlert(){
+    func showAlert(message: String){
      
-        let alert = UIAlertController(title: "INVALID", message: "PLEASE ENTER THE VALID USERNAME AND PASSWORD", preferredStyle: .alert)
+        let alert = UIAlertController(title: message, message: "PLEASE ENTER THE VALID TEXT", preferredStyle: .alert)
         let ok = UIAlertAction(title: "ok", style: .cancel, handler: nil)
         
         alert.addAction(ok)
@@ -225,10 +233,6 @@ class AddBillVC: UIViewController {
 //
 //    }
 //
-    override func viewWillDisappear(_ animated: Bool) {
-    
-       
-               
-    }
+   
     
 }

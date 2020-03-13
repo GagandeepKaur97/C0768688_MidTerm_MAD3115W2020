@@ -121,7 +121,8 @@ class BillDetailTVC: UITableViewController {
     */
     
     override func viewWillAppear(_ animated: Bool) {
-        
+       
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -69,7 +69,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		42ABFE0E24120C6B0075DC31 /* classes */ = {
+		42ABFE0E24120C6B0075DC31 /* models */ = {
 			isa = PBXGroup;
 			children = (
 				42ABFE2924143EED0075DC31 /* ClipartKey_595923.png */,
@@ -82,7 +82,7 @@
 				42ABFE0F24120F510075DC31 /* Bill.swift */,
 				42ABFE2D241457B40075DC31 /* Customer.swift */,
 			);
-			path = classes;
+			path = models;
 			sourceTree = "<group>";
 		};
 		9BBE54352411E0F80015407A = {
@@ -104,7 +104,7 @@
 		9BBE54402411E0F80015407A /* C0768688_MidTerm_MAD3115W2020. */ = {
 			isa = PBXGroup;
 			children = (
-				42ABFE0E24120C6B0075DC31 /* classes */,
+				42ABFE0E24120C6B0075DC31 /* models */,
 				9BBE54412411E0F80015407A /* AppDelegate.swift */,
 				9BBE54432411E0F80015407A /* SceneDelegate.swift */,
 				9BBE54452411E0F80015407A /* ViewController.swift */,

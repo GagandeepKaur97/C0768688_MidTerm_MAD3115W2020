@@ -60,7 +60,17 @@ class NewCustomerVC: UIViewController {
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
             
-        }else{
+        }else if emailtxt.text?.Emailvalidation() == false{
+            
+            
+            let alert    = UIAlertController(title: "Invalid email id", message: nil, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        else{
             
             singletonData.getInstance().addCustomer(customer: Customer(customerId: id!, firstName: firstName!, lastName: lastName!, emailId: email!))
             
