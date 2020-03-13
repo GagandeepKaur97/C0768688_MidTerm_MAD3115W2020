@@ -216,10 +216,11 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8j0-YZ-bl8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eSh-yv-3vc">
+                        <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eSh-yv-3vc">
                             <rect key="frame" x="0.0" y="233" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.52091377973556519" green="0.75951308012008667" blue="0.91217046976089478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -251,12 +252,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="billtype" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USE-XG-nxI">
-                                            <rect key="frame" x="40" y="114" width="334" height="21"/>
+                                            <rect key="frame" x="40" y="124" width="334" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="USE-XG-nxI" secondAttribute="trailing" constant="20" id="1u3-tb-rxS"/>
                                         <constraint firstItem="USE-XG-nxI" firstAttribute="leading" secondItem="0pF-xe-lrI" secondAttribute="leadingMargin" constant="20" id="3hb-Ll-rU9"/>
@@ -269,9 +271,10 @@
                                         <constraint firstItem="Mwb-0h-JYP" firstAttribute="leading" secondItem="0pF-xe-lrI" secondAttribute="leadingMargin" constant="20" id="rxK-wp-oMb"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Mwb-0h-JYP" secondAttribute="trailing" constant="20" id="yd7-bm-kJg"/>
                                         <constraint firstItem="qcZ-aN-kJ2" firstAttribute="leading" secondItem="0pF-xe-lrI" secondAttribute="leadingMargin" constant="20" id="z3d-Ij-H8l"/>
-                                        <constraint firstItem="USE-XG-nxI" firstAttribute="top" secondItem="Mwb-0h-JYP" secondAttribute="bottom" constant="5" id="zXp-eO-2w5"/>
+                                        <constraint firstItem="USE-XG-nxI" firstAttribute="top" secondItem="Mwb-0h-JYP" secondAttribute="bottom" constant="15" id="zXp-eO-2w5"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.75454980134963989" green="0.87417316436767578" blue="0.93894511461257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="billAmmount" destination="Mwb-0h-JYP" id="Qxt-es-noq"/>
                                     <outlet property="billDate" destination="qcZ-aN-kJ2" id="GMz-wr-o4x"/>

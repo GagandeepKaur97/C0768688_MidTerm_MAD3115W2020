@@ -60,11 +60,11 @@ class BillDetailTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "billDetail") as! CustomerTableViewcellDVc
         
-        cell.billId.text = "\(bill[indexPath.row].billId)"
+        cell.billId.text = "Bill Id: \(bill[indexPath.row].billId)"
         
-        cell.billDate.text = bill[indexPath.row].billDate
-        cell.billAmmount.text = "\(bill[indexPath.row].totalBillAmount)"
-        cell.billtypelbl.text = bill[indexPath.row].billType
+        cell.billDate.text = "Bill Date: " + bill[indexPath.row].billDate
+        cell.billAmmount.text = "Ammount: \(bill[indexPath.row].totalBillAmount)"
+        cell.billtypelbl.text = "Type: " + bill[indexPath.row].billType
         
         
         
