@@ -20,13 +20,13 @@ class Internet : Bill
           //self.totalBillAmount = totalBillAmount
         super.init (billId , billDate, billType)
         self.totalBillAmount = calculateTotalBill()
-    
+    }
        
     
-        func calculateTotalBill() -> Double
+   override  func calculateTotalBill() -> Double
         {
         self.totalBillAmount = Double(internetGbUsed) * 0.20
             return totalBillAmount        }
     }
 
-}
+

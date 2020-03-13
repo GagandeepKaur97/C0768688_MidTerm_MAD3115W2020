@@ -49,15 +49,15 @@ enum CustomerNotFound {
     
    func addBill(bill: Bill){
       bills.append(bill)
-      billsDictionary.updateValue(bills, forKey: customerId)
+    billsDictionary.updateValue(bills, forKey: customerId)
 
   }
     
     func calculateTotalBill()-> Double
     {
-
-    
        
+    
+   
         for item in bills {
             totalAmountToPay = totalAmountToPay + Double(item.totalBillAmount)
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddBillVC: UIViewController {
+class AddBillVC : UIViewController {
 
     @IBOutlet weak var billIdTxtFld: UITextField!
     @IBOutlet weak var billDateTxtFld: UITextField!
@@ -24,7 +24,7 @@ class AddBillVC: UIViewController {
     @IBOutlet weak var txtFeild5: UITextField!
     
     
-    var c :Customer?
+    var c : Customer?
     var h : Hydro?
     var i : Internet?
     var m : Mobile?
@@ -62,7 +62,38 @@ class AddBillVC: UIViewController {
     
     @IBAction func addBill(_ sender: Any) {
         
-        let id = billIdTxtFld.text
+         /* let alert = UIAlertController(title: "Add new bill", message: "Select type of bill", preferredStyle: .actionSheet);
+                alert.addAction(UIAlertAction(title: "Hydro", style: .default, handler: { (action) in
+                    
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    let addNewHydroBillVC = sb.instantiateViewController(identifier: "addNewHydroBillVC") as! AddBillVC
+                    AddBillVC.c = self.c
+                    self.navigationController?.pushViewController(addNewHydroBillVC, animated: true)
+                    
+                }));
+                alert.addAction(UIAlertAction(title: "Mobile", style: .default, handler:{ (action) in
+                    
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    let addNewMobileBillVC = sb.instantiateViewController(identifier: "addNewMobileBillVC") as! AddBillVC
+                    AddBillVC.c = self.c
+                    self.navigationController?.pushViewController(addNewMobileBillVC, animated: true)
+                    
+                }));
+                alert.addAction(UIAlertAction(title: "Internet", style: .default, handler:{ (action) in
+                    
+                    let sb = UIStoryboard(name: "Main", bundle: nil)
+                    let addNewInternetBillVC = sb.instantiateViewController(identifier: "addNewInternetBillVC") as! AddBillVC                    AddBillVC.customer = self.customer
+                    self.navigationController?.pushViewController(addNewInternetBillVC, animated: true)
+                    
+                }));
+                self.present(alert, animated: true, completion: nil);
+                
+            }
+            
+        }*/
+        
+       
+        let id   = billIdTxtFld.text
         let date = billDateTxtFld.text
         let type = billTypeTxtFld.text
         
@@ -77,7 +108,9 @@ class AddBillVC: UIViewController {
                 
                 showAlert(message: "Empty feilds")
                 
-            }else{
+            }
+            else
+            {
                  h = Hydro(billId: Int(id!)!, billDate: date!, billType: type!, agencyName: agency!, unitConsumed: Int(unit!)!)
                 c?.addBill(bill: h!)
             }
@@ -130,6 +163,15 @@ class AddBillVC: UIViewController {
         
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     @IBAction func datepicker(_ sender: Any) {
         
