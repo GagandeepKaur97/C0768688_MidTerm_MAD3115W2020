@@ -21,6 +21,7 @@
 		42ABFE2C2414463C0075DC31 /* Singlton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE2B2414463C0075DC31 /* Singlton.swift */; };
 		42ABFE2E241457B40075DC31 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE2D241457B40075DC31 /* Customer.swift */; };
 		42F52BB02419684900B365B9 /* AddBillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F52BAF2419684900B365B9 /* AddBillVC.swift */; };
+		9B921609241C002000705C38 /* CustomerTableViewcellDVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B921608241C002000705C38 /* CustomerTableViewcellDVc.swift */; };
 		9BBE54422411E0F80015407A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE54412411E0F80015407A /* AppDelegate.swift */; };
 		9BBE54442411E0F80015407A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE54432411E0F80015407A /* SceneDelegate.swift */; };
 		9BBE54462411E0F80015407A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE54452411E0F80015407A /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 		42ABFE2B2414463C0075DC31 /* Singlton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singlton.swift; sourceTree = "<group>"; };
 		42ABFE2D241457B40075DC31 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		42F52BAF2419684900B365B9 /* AddBillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillVC.swift; sourceTree = "<group>"; };
+		9B921608241C002000705C38 /* CustomerTableViewcellDVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTableViewcellDVc.swift; sourceTree = "<group>"; };
 		9BBE543E2411E0F80015407A /* C0768688_MidTerm_MAD3115W2020..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0768688_MidTerm_MAD3115W2020..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBE54412411E0F80015407A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BBE54432411E0F80015407A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				42ABFE2B2414463C0075DC31 /* Singlton.swift */,
 				42F52BAF2419684900B365B9 /* AddBillVC.swift */,
 				422BD4B4241B59B000054C49 /* BillDetailTVC.swift */,
+				9B921608241C002000705C38 /* CustomerTableViewcellDVc.swift */,
 			);
 			path = C0768688_MidTerm_MAD3115W2020.;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				42ABFE1024120F510075DC31 /* Bill.swift in Sources */,
 				9BBE54462411E0F80015407A /* ViewController.swift in Sources */,
 				9BBE54422411E0F80015407A /* AppDelegate.swift in Sources */,
+				9B921609241C002000705C38 /* CustomerTableViewcellDVc.swift in Sources */,
 				42ABFE1424120F8B0075DC31 /* Mobile.swift in Sources */,
 				9BBE54442411E0F80015407A /* SceneDelegate.swift in Sources */,
 				42ABFE2824138E410075DC31 /* NewCustomerVC.swift in Sources */,
