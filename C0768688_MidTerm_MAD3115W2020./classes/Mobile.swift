@@ -13,10 +13,10 @@ class Mobile : Bill
     var mobileManufacturerName : String
     var planName               : String
     var mobileNumber           : String
-    var internetGbUsed         : Int
+    var internetGbUsed         : Double
     var minuteUsed             : Int
     
-     init(billId: Int, billDate: String, billType: String,mobileManufacturerName: String , planName: String , mobileNumber : String , internetGbUsed :Int , minuteUsed : Int )
+     init(billId: Int, billDate: String, billType:BillType,mobileManufacturerName: String , planName: String , mobileNumber : String , internetGbUsed :Double ,minuteUsed : Int )
         
     {
         self.mobileManufacturerName = mobileManufacturerName
@@ -29,32 +29,16 @@ class Mobile : Bill
         self.minuteUsed = minuteUsed
       // self.totalBillAmount = totalBillAmount
         super.init(billId, billDate, billType )
-        self.totalBillAmount = Double(minuteUsed) * 0.10
-        
+        self.totalBillAmount = calculateTotalBill()
     }
     
-    override func Display() ->String
-    {
         
-        var s =  super.Display() + "\n"
-        
-        s += "\t MobileManufacturerName    : \(self.mobileManufacturerName)\n"
-        s += "\t PlanName                  : \(self.planName)\n"
-        s += "\t MobileNumber              : \(String(describing: self.mobileNumber))\n"
-        s += "\t InternetGbUsed            : \(self.internetGbUsed)GB \n"
-        s += "\t MinuteUsed                : \(self.minuteUsed) minutes \n"
-        s += "*************************************************** \n"
-        
-        
-        super.Display()
-        print("\t MobileManufacturerName    : \(self.mobileManufacturerName)")
-        print("\t PlanName                  : \(self.planName)")
-        print("\t MobileNumber              : \(String(describing: self.mobileNumber))")
-        print("\t InternetGbUsed            : \(self.internetGbUsed)GB")
-        print("\t MinuteUsed                : \(self.minuteUsed) minutes")
-        print("***************************************************")
-        
-        return s
-        
-    }
+override  func calculateTotalBill() -> Double
+{
+    self.totalBillAmount = Double(internetGbUsed) *  0.20 + Double(minuteUsed) * 0.10
+
+    return totalBillAmount
+    
+}
+
 }
