@@ -23,7 +23,7 @@ class AddBillVC: UIViewController {
     @IBOutlet weak var txtFeild4: UITextField!
     @IBOutlet weak var txtFeild5: UITextField!
     
-    var delegCBD: CustomerBillDetailsVC?
+    
     var c :Customer?
     var h : Hydro?
     var i : Internet?
@@ -43,7 +43,7 @@ class AddBillVC: UIViewController {
         txtFeild4.isHidden = true
         txtFeild5.isHidden = true
         
-        c = delegCBD?.selectcustomer
+     
         
         
         
@@ -91,7 +91,7 @@ class AddBillVC: UIViewController {
 
                 i = Internet(billId: Int(id!)!, billDate: date!, billType: type!, providerName: provider!, internetGbUsed: Int(gb!)!)
                 c?.addBill(bill: i!)
-                c?.Display()
+            
             }
             
         case 2:
@@ -226,8 +226,8 @@ class AddBillVC: UIViewController {
 //    }
 //
     override func viewWillDisappear(_ animated: Bool) {
-        let  str = c?.Display()
-        delegCBD!.billDetailsTxtView.text = str!
+    
+       
                
     }
     

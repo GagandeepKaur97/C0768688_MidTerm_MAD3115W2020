@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422BD4B5241B59B000054C49 /* BillDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BD4B4241B59B000054C49 /* BillDetailTVC.swift */; };
 		42ABFE1024120F510075DC31 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE0F24120F510075DC31 /* Bill.swift */; };
 		42ABFE1224120F760075DC31 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE1124120F760075DC31 /* Internet.swift */; };
 		42ABFE1424120F8B0075DC31 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE1324120F8B0075DC31 /* Mobile.swift */; };
@@ -19,7 +20,6 @@
 		42ABFE2A24143EED0075DC31 /* ClipartKey_595923.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ABFE2924143EED0075DC31 /* ClipartKey_595923.png */; };
 		42ABFE2C2414463C0075DC31 /* Singlton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE2B2414463C0075DC31 /* Singlton.swift */; };
 		42ABFE2E241457B40075DC31 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABFE2D241457B40075DC31 /* Customer.swift */; };
-		42F52BAE241966E000B365B9 /* CustomerBillDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F52BAD241966E000B365B9 /* CustomerBillDetailsVC.swift */; };
 		42F52BB02419684900B365B9 /* AddBillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F52BAF2419684900B365B9 /* AddBillVC.swift */; };
 		9BBE54422411E0F80015407A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE54412411E0F80015407A /* AppDelegate.swift */; };
 		9BBE54442411E0F80015407A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE54432411E0F80015407A /* SceneDelegate.swift */; };
@@ -31,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		422BD4B4241B59B000054C49 /* BillDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDetailTVC.swift; sourceTree = "<group>"; };
 		42ABFE0F24120F510075DC31 /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		42ABFE1124120F760075DC31 /* Internet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
 		42ABFE1324120F8B0075DC31 /* Mobile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		42ABFE2924143EED0075DC31 /* ClipartKey_595923.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClipartKey_595923.png; sourceTree = "<group>"; };
 		42ABFE2B2414463C0075DC31 /* Singlton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singlton.swift; sourceTree = "<group>"; };
 		42ABFE2D241457B40075DC31 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
-		42F52BAD241966E000B365B9 /* CustomerBillDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerBillDetailsVC.swift; sourceTree = "<group>"; };
 		42F52BAF2419684900B365B9 /* AddBillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillVC.swift; sourceTree = "<group>"; };
 		9BBE543E2411E0F80015407A /* C0768688_MidTerm_MAD3115W2020..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0768688_MidTerm_MAD3115W2020..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBE54412411E0F80015407A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 				9BF21B1D241320C600D26448 /* customers.plist */,
 				42ABFE2724138E410075DC31 /* NewCustomerVC.swift */,
 				42ABFE2B2414463C0075DC31 /* Singlton.swift */,
-				42F52BAD241966E000B365B9 /* CustomerBillDetailsVC.swift */,
 				42F52BAF2419684900B365B9 /* AddBillVC.swift */,
+				422BD4B4241B59B000054C49 /* BillDetailTVC.swift */,
 			);
 			path = C0768688_MidTerm_MAD3115W2020.;
 			sourceTree = "<group>";
@@ -194,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42ABFE182412104C0075DC31 /* IDisplay.swift in Sources */,
+				422BD4B5241B59B000054C49 /* BillDetailTVC.swift in Sources */,
 				42ABFE2E241457B40075DC31 /* Customer.swift in Sources */,
 				42ABFE1624120F970075DC31 /* Hydro.swift in Sources */,
 				42ABFE2624121DFA0075DC31 /* CustomerTableViewController.swift in Sources */,
@@ -204,7 +205,6 @@
 				42ABFE1424120F8B0075DC31 /* Mobile.swift in Sources */,
 				9BBE54442411E0F80015407A /* SceneDelegate.swift in Sources */,
 				42ABFE2824138E410075DC31 /* NewCustomerVC.swift in Sources */,
-				42F52BAE241966E000B365B9 /* CustomerBillDetailsVC.swift in Sources */,
 				42ABFE2C2414463C0075DC31 /* Singlton.swift in Sources */,
 				42ABFE1E241210720075DC31 /* StringExtension.swift in Sources */,
 				42ABFE1224120F760075DC31 /* Internet.swift in Sources */,

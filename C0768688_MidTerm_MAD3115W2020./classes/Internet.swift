@@ -19,25 +19,14 @@ class Internet : Bill
         self.internetGbUsed = internetGbUsed
           //self.totalBillAmount = totalBillAmount
         super.init (billId , billDate, billType)
+        self.totalBillAmount = calculateTotalBill()
+    
+       
+    
+        func calculateTotalBill() -> Double
+        {
         self.totalBillAmount = Double(internetGbUsed) * 0.20
+            return totalBillAmount        }
     }
-    
-   override func Display() ->String
-   {
-    
-    var s = super.Display() + "\n"
-    s += " \t ProviderName              : \(self.providerName)\n"
-    s += " \t InternetGb                : \(self.internetGbUsed) GB \n"
-    s += "*************************************************** \n"
-    
-    
-    super.Display()
-    
-    print(" \t ProviderName              : \(self.providerName)")
-    print(" \t InternetGb                : \(self.internetGbUsed) GB")
-    print("***************************************************")
-    
-    return s
-    
-    }
-    }
+
+}

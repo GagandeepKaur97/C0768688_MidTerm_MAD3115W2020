@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Customer : IDisplay{
+class Customer : CalculateBill{
     
     
 enum CustomerNotFound {
@@ -63,75 +63,85 @@ enum CustomerNotFound {
         }
         return totalAmountToPay
     }
-   func Display()-> String
-    {
-        
-        var s = "CustomerId        :\(self.customerId  )\n"
-        s += "FullName          :\(self.fullName   )\n"
-        s += "EmailId           :\(String(describing: self.emailId)   )\n"
-        s += " _________Bill Information_______ \n"
-        s += "*************************************************** \n"
-        
-        print("CustomerId        :\(self.customerId  )")
-        print("FullName          :\(self.fullName   )")
-        print("EmailId           :\(String(describing: self.emailId)   )")
-        
-        print(" _________Bill Information_______")
-        print("***************************************************")
-     for i in billsDictionary {
-
-   // i.value.Display()
-      }
-        for item in bills {
-            
-            s += item.Display() + "\n"
-            item.Display()
-        }
-        s += "   totalAmountToPay  :  \n"
-        
-       print("   totalAmountToPay  :  ")
-        
-        if billsDictionary.count == 0
-        {
-            s += "       Customer has no bill \n"
-            s += "*************************************************** \n"
-            print("       Customer has no bill")
-            print("***************************************************")
-            
-        }
-        else
-        {
-            s += "       Total Bill Amount to pay :\(calculateTotalBill())\n"
-            s += "*************************************************** \n"
-            print("       Total Bill Amount to pay :\(calculateTotalBill())" )
-            print("***************************************************")
-        }
-        
-        return s
-    }
     
-   func findBill(for id :Int){
-       var billid : Int
-       var exixt = false
-       
-        for item in bills {
-          billid = item.billId
-            if billid == id{
-                print("***************************************************")
-                print("--------------------Bill Details-------------------")
-               item.Display()
-               print("***************************************************")
-                exixt = true
-               break
-          }
-        }
-     
-        if !exixt{
-          print("***************************************************")
-           print("         No bill found with given index...........")
-            print("***************************************************")
+    func getAllbills() -> [Bill]
+       {
+           var allBills = [Bill] ()
+           for bill in bills {
+               allBills.append(bill)
+           }
+           return allBills
+           
        }
-    }
+//   func Display()-> String
+//    {
+//        
+//        var s = "CustomerId        :\(self.customerId  )\n"
+//        s += "FullName          :\(self.fullName   )\n"
+//        s += "EmailId           :\(String(describing: self.emailId)   )\n"
+//        s += " _________Bill Information_______ \n"
+//        s += "*************************************************** \n"
+//        
+//        print("CustomerId        :\(self.customerId  )")
+//        print("FullName          :\(self.fullName   )")
+//        print("EmailId           :\(String(describing: self.emailId)   )")
+//        
+//        print(" _________Bill Information_______")
+//        print("***************************************************")
+//     for i in billsDictionary {
+//
+//   // i.value.Display()
+//      }
+//        for item in bills {
+//            
+//            s += item.Display() + "\n"
+//            item.Display()
+//        }
+//        s += "   totalAmountToPay  :  \n"
+//        
+//       print("   totalAmountToPay  :  ")
+//        
+//        if billsDictionary.count == 0
+//        {
+//            s += "       Customer has no bill \n"
+//            s += "*************************************************** \n"
+//            print("       Customer has no bill")
+//            print("***************************************************")
+//            
+//        }
+//        else
+//        {
+//            s += "       Total Bill Amount to pay :\(calculateTotalBill())\n"
+//            s += "*************************************************** \n"
+//            print("       Total Bill Amount to pay :\(calculateTotalBill())" )
+//            print("***************************************************")
+//        }
+//        
+//        return s
+//    }
+//    
+//   func findBill(for id :Int){
+//       var billid : Int
+//       var exixt = false
+//
+//        for item in bills {
+//          billid = item.billId
+//            if billid == id{
+//                print("***************************************************")
+//                print("--------------------Bill Details-------------------")
+//               item.Display()
+//               print("***************************************************")
+//                exixt = true
+//               break
+//          }
+//        }
+//
+//        if !exixt{
+//          print("***************************************************")
+//           print("         No bill found with given index...........")
+//            print("***************************************************")
+//       }
+//    }
    
    
 }

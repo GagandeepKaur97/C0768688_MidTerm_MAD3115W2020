@@ -1,32 +1,40 @@
 //
-//  CustomerTableViewController.swift
+//  BillDetailTVC.swift
 //  C0768688_MidTerm_MAD3115W2020.
 //
-//  Created by Evneet kaur on 2020-03-06.
+//  Created by Evneet kaur on 2020-03-13.
 //  Copyright © 2020 MacStudent. All rights reserved.
 //
 
 import UIKit
 
-class CustomerTableViewController: UITableViewController {
+class BillDetailTVC: UITableViewController {
     
-    var index = -1
-    var customers: [Customer] = []
+    var deleCTBC: CustomerTableViewController?
+    
+    
+    @IBOutlet weak var idlbl: UILabel!
+    @IBOutlet weak var datelbl: UILabel!
+    @IBOutlet weak var amountlbl: UILabel!
+    
+    
+    var cust : Customer?
+    var bill : [Bill] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bill =  (cust?.getAllbills())!
+        
+        for item in bill {
+            print("\(item.billType)")
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        customers = singletonData.getInstance().getAllCustomers()
-        
-        for c in customers {
-            print(c.fullName)
-        }
-        
     }
 
     // MARK: - Table view data source
@@ -38,39 +46,20 @@ class CustomerTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return customers.count
+        return bill.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
-        
-        cell?.textLabel?.text = customers[indexPath.row].fullName
-        
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "billDetail")
+        cell?.textLabel?.text = "BILL ID: \(bill[indexPath.row].billId)"
+        cell?.detailTextLabel?.text = "total :\(bill[indexPath.row].calculateTotalBill())"
 
         // Configure the cell...
 
         return cell!
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-         customers = singletonData.getInstance().getAllCustomers()
-        tableView.reloadData()
-    }
-    
-    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let delAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, success) in
-            
-            self.customers.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-        return UISwipeActionsConfiguration(actions: [delAction])
-    }
-    
-   
-
 
     /*
     // Override to support conditional editing of the table view.
@@ -107,38 +96,14 @@ class CustomerTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        
-        if let destination = segue.destination as? NewCustomerVC{
-            
-            destination.customerDelegate = self
-            
-            if let tablecell = sender as? UITableViewCell{
-                let index = tableView.indexPath(for: tablecell)?.row
-                self.index = index!
-                destination.index = index!
-            }
-        }
-        
-        if let dest = segue.destination as? BillDetailTVC{
-            dest.deleCTBC = self
-            
-            if let cell = sender as? UITableViewCell{
-                let index = tableView.indexPath(for: cell)?.row
-                dest.cust = customers[index!]
-            }
-    
-            
-        }
-        
-        
-        }
-
+    }
+    */
 
 }
