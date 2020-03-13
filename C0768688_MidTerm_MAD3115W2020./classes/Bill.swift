@@ -7,43 +7,28 @@
 //
 
 import Foundation
+enum BillType
+{
+    case INTERNET, MOBILE, HYDRO, INSURANCE
+}
 
-class Bill     :   IDisplay {
-    
-    
+
+class Bill  :  CalculateBill
+{
     var billId          : Int
     var billDate        : String
-    var billType        : String
-    var totalBillAmount : Double
-//    var date :String
+    var billType        : BillType
+    var totalBillAmount : Double = 0.0
     
-    init (_ billId : Int, _ billDate : String , _ billType : String ){
+    init (_ billId : Int, _ billDate : String , _ billType : BillType)
+    {
         self.billId = billId
         self.billDate = billDate
         self.billType = billType
-        self.totalBillAmount = 0
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "EEE, MMM,dd"
-//        let hourformatter = DateFormatter()
-//        hourformatter.dateFormat = "hh:mm a"
-//        date = formatter.string(from: billDate) + "  " + hourformatter.string(from: billDate)
+    
     }
-    
-    
-    func Display() -> String {
-        
-        var s = "\t BillId                    : \(self.billId)\n"
-        s += "\t BillDate                  : \(self.billDate)\n"
-        s += "\t BillType                  : \(self.billType)\n"
-        s += "\t TotalBillAmount           : $\(self.totalBillAmount)\n"
-        
-        
-         print("\t BillId                    : \(self.billId)")
-        print("\t BillDate                  : \(self.billDate)")
-         print("\t BillType                  : \(self.billType)")
-         print("\t TotalBillAmount           : $\(self.totalBillAmount)")
-        
-        return s
-    }
-    
+    func calculateTotalBill() -> Double {
+        return 0.0
 }
+}
+
