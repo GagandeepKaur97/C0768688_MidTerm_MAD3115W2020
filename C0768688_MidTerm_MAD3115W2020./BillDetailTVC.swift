@@ -13,6 +13,8 @@ class BillDetailTVC: UITableViewController {
     var deleCTBC: CustomerTableViewController?
     
     @IBOutlet weak var total: UILabel!
+    //    @IBOutlet weak var total: UILabel
+    
     
     
     
@@ -126,7 +128,7 @@ class BillDetailTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(150.0)
+        return CGFloat(170.0)
     }
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
