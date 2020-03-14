@@ -15,12 +15,6 @@ class BillDetailTVC: UITableViewController {
     @IBOutlet weak var total: UILabel!
     //    @IBOutlet weak var total: UILabel
     
-    
-    
-    
-    
-    
-    
     var cust : Customer?
     var bill : [Bill] = []
 

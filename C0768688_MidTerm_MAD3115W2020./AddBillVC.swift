@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddBillVC : UIViewController  {
+class AddBillVC : UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var billIdTxtFld: UITextField!
     @IBOutlet weak var billDateTxtFld: UITextField!
