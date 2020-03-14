@@ -305,7 +305,7 @@
         <!--Add BillVC-->
         <scene sceneID="0Xk-zE-CGO">
             <objects>
-                <viewController id="s6N-Sg-ib8" customClass="AddBillVC" customModule="C0768688_MidTerm_MAD3115W2020_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddBillVC" id="s6N-Sg-ib8" customClass="AddBillVC" customModule="C0768688_MidTerm_MAD3115W2020_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h6v-P1-Z9o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -421,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDN-au-yJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2928.985507246377" y="567.1875"/>
+            <point key="canvasLocation" x="3167" y="437"/>
         </scene>
     </scenes>
     <resources>

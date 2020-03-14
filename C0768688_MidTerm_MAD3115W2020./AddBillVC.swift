@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddBillVC : UIViewController {
+class AddBillVC : UIViewController  {
 
     @IBOutlet weak var billIdTxtFld: UITextField!
     @IBOutlet weak var billDateTxtFld: UITextField!
@@ -61,43 +61,13 @@ class AddBillVC : UIViewController {
     */
     
     @IBAction func addBill(_ sender: Any) {
-        
-         /* let alert = UIAlertController(title: "Add new bill", message: "Select type of bill", preferredStyle: .actionSheet);
-                alert.addAction(UIAlertAction(title: "Hydro", style: .default, handler: { (action) in
-                    
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    let addNewHydroBillVC = sb.instantiateViewController(identifier: "addNewHydroBillVC") as! AddBillVC
-                    AddBillVC.c = self.c
-                    self.navigationController?.pushViewController(addNewHydroBillVC, animated: true)
-                    
-                }));
-                alert.addAction(UIAlertAction(title: "Mobile", style: .default, handler:{ (action) in
-                    
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    let addNewMobileBillVC = sb.instantiateViewController(identifier: "addNewMobileBillVC") as! AddBillVC
-                    AddBillVC.c = self.c
-                    self.navigationController?.pushViewController(addNewMobileBillVC, animated: true)
-                    
-                }));
-                alert.addAction(UIAlertAction(title: "Internet", style: .default, handler:{ (action) in
-                    
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    let addNewInternetBillVC = sb.instantiateViewController(identifier: "addNewInternetBillVC") as! AddBillVC                    AddBillVC.customer = self.customer
-                    self.navigationController?.pushViewController(addNewInternetBillVC, animated: true)
-                    
-                }));
-                self.present(alert, animated: true, completion: nil);
-                
-            }
-            
-        }*/
-        
-       
+    
         let id   = billIdTxtFld.text
         let date = billDateTxtFld.text
         let type = billTypeTxtFld.text
         
-        switch billTypeSegLbl.selectedSegmentIndex {
+        switch billTypeSegLbl.selectedSegmentIndex
+        {
         case 0:
             let agency = txtFeild1.text
             let unit = txtFeild2.text
@@ -140,27 +110,29 @@ class AddBillVC : UIViewController {
                 
                 if txtFeild3.text?.mobilevalidation() == false{
                     showAlert(message: "Invalid mobile number")
-                }else{
+                }
+                else
+                {
                     
                     m = Mobile(billId: Int(id!)!, billDate: date!, billType: type!, mobileManufacturerName: manufacturer!, planName: plan!, mobileNumber: mobile!, internetGbUsed: Int(gbused!)!, minuteUsed: Int(minute!)!)
                                    c?.addBill(bill: m!)
-                                   
-                    
-                }
-                
-
+                           
+                     
                
             }
             
-        default:
-            break
+         
         
         }
+        default:
+            break
+        }
         
-        
-        
-        
-        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+             let AddBillVC = sb.instantiateViewController(identifier: "AddBillVC") as AddBillVC
+              AddBillVC.c = self.c
+             navigationController?.pushViewController(AddBillVC, animated: true)
+  
         
     }
     
