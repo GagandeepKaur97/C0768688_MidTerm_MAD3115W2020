@@ -236,7 +236,7 @@ class AddBillVC : UIViewController  {
     
     func showAlert(message: String){
      
-        let alert = UIAlertController(title: message, message: "PLEASE ENTER THE VALID TEXT", preferredStyle: .alert)
+        let alert = UIAlertController(title: message, message: "PLEASE ENTER THE VALID TEXT ", preferredStyle: .alert)
         let ok = UIAlertAction(title: "ok", style: .cancel, handler: nil)
         
         alert.addAction(ok)
