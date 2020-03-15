@@ -66,7 +66,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SIGN UP " id="VtC-2f-gNJ"/>
+                    <navigationItem key="navigationItem" title="SIGN UP " id="VtC-2f-gNJ">
+                        <barButtonItem key="backBarButtonItem" title="LogOut" id="Al7-xM-Pah"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="namelbl" destination="2sF-iB-zVH" id="sce-M8-LT6"/>
                         <outlet property="paswwordlbl" destination="3ts-4D-xc4" id="SXy-3a-5RO"/>
@@ -96,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
-        <!--Customer Table View Controller-->
+        <!--Customers-->
         <scene sceneID="g7V-o8-pks">
             <objects>
                 <tableViewController id="uAk-OR-qrr" customClass="CustomerTableViewController" customModule="C0768688_MidTerm_MAD3115W2020_" customModuleProvider="target" sceneMemberID="viewController">
@@ -124,7 +126,7 @@
                             <outlet property="delegate" destination="uAk-OR-qrr" id="vM6-eu-31G"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="l9W-K0-kOe">
+                    <navigationItem key="navigationItem" title="Customers" id="l9W-K0-kOe">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Rwi-F3-lph"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.crop.circle.fill.badge.checkmark" catalog="system" id="Joy-ej-sMA">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -138,7 +140,7 @@
             </objects>
             <point key="canvasLocation" x="1804" y="-154"/>
         </scene>
-        <!--New CustomerVC-->
+        <!--Customer Details-->
         <scene sceneID="9f2-uh-Plq">
             <objects>
                 <viewController id="bfY-It-Wmp" customClass="NewCustomerVC" customModule="C0768688_MidTerm_MAD3115W2020_" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,7 +198,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kQJ-yx-nSR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JTx-8d-VHo"/>
+                    <navigationItem key="navigationItem" title="Customer Details" id="JTx-8d-VHo"/>
                     <connections>
                         <outlet property="addBtn" destination="eV9-lb-ScE" id="IBO-ET-Qzz"/>
                         <outlet property="emailtxt" destination="4lW-PW-11J" id="xcv-19-l7x"/>
@@ -207,9 +209,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wlR-dy-xiu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2576.811594202899" y="-162.05357142857142"/>
+            <point key="canvasLocation" x="2774" y="-154"/>
         </scene>
-        <!--Bill DetailTVC-->
+        <!--Bills-->
         <scene sceneID="FnU-g6-ECh">
             <objects>
                 <tableViewController id="TMh-0A-6qx" customClass="BillDetailTVC" customModule="C0768688_MidTerm_MAD3115W2020_" customModuleProvider="target" sceneMemberID="viewController">
@@ -287,7 +289,7 @@
                             <outlet property="delegate" destination="TMh-0A-6qx" id="ZU8-GY-hYj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gRX-oX-o2R">
+                    <navigationItem key="navigationItem" title="Bills" id="gRX-oX-o2R">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus.square.fill.on.square.fill" catalog="system" id="3Q4-0H-pZa">
                             <connections>
                                 <segue destination="s6N-Sg-ib8" kind="show" id="lrl-BK-zpu"/>
@@ -302,7 +304,7 @@
             </objects>
             <point key="canvasLocation" x="1878.2608695652175" y="583.92857142857144"/>
         </scene>
-        <!--Add BillVC-->
+        <!--Bill Details-->
         <scene sceneID="0Xk-zE-CGO">
             <objects>
                 <viewController storyboardIdentifier="AddBillVC" id="s6N-Sg-ib8" customClass="AddBillVC" customModule="C0768688_MidTerm_MAD3115W2020_" customModuleProvider="target" sceneMemberID="viewController">
@@ -405,7 +407,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GwK-4o-Wbk"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jzT-Ja-CDh"/>
+                    <navigationItem key="navigationItem" title="Bill Details" id="jzT-Ja-CDh"/>
                     <connections>
                         <outlet property="billDateTxtFld" destination="2G2-4e-whK" id="hpd-n0-ig4"/>
                         <outlet property="billIdTxtFld" destination="TJh-T0-gfW" id="9qH-1e-vYY"/>
@@ -421,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDN-au-yJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3167" y="437"/>
+            <point key="canvasLocation" x="3317" y="485"/>
         </scene>
     </scenes>
     <resources>

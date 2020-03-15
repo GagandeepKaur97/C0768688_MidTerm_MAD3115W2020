@@ -11,6 +11,7 @@ import UIKit
 class BillDetailTVC: UITableViewController {
     
     var deleCTBC: CustomerTableViewController?
+    var deladdbill: AddBillVC?
     
     @IBOutlet weak var total: UILabel!
     //    @IBOutlet weak var total: UILabel
@@ -116,17 +117,11 @@ class BillDetailTVC: UITableViewController {
     }
     */
     
-    override func viewWillAppear(_ animated: Bool) {
-       
-        tableView.reloadData()
-    }
+   
+    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(170.0)
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//           return CGFloat(200.0)
-//       }
-
+  
 }

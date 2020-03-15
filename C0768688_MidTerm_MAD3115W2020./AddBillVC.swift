@@ -115,33 +115,16 @@ class AddBillVC : UIViewController, UITextFieldDelegate {
                 {
                     
                     m = Mobile(billId: Int(id!)!, billDate: date!, billType: type!, mobileManufacturerName: manufacturer!, planName: plan!, mobileNumber: mobile!, internetGbUsed: Int(gbused!)!, minuteUsed: Int(minute!)!)
-                                   c?.addBill(bill: m!)
-                           
-                     
+                   
                
             }
-            
-         
-        
         }
         default:
             break
         }
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-             let AddBillVC = sb.instantiateViewController(identifier: "AddBillVC") as AddBillVC
-              AddBillVC.c = self.c
-             navigationController?.pushViewController(AddBillVC, animated: true)
-  
-        
+       
     }
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -168,8 +151,8 @@ class AddBillVC : UIViewController, UITextFieldDelegate {
             txtFeild2.placeholder = "units consumed"
             txtFeild1.isHidden = false
             txtFeild2.isHidden = false
+ 
             
-//            h = Hydro(billId: Int(billIdTxtFld.text!)!, billDate: billDateTxtFld.text!, billType: billTypeTxtFld.text!, agencyName: txtFeild1.text!, unitConsumed: Int(txtFeild2.text!)!)
             
             txtFeild3.isHidden = true
             txtFeild4.isHidden = true
@@ -180,12 +163,7 @@ class AddBillVC : UIViewController, UITextFieldDelegate {
             txtFeild2.placeholder = "GB used"
             txtFeild1.isHidden = false
             txtFeild2.isHidden = false
-            
-//            i = Internet(billId: Int(billIdTxtFld.text!)!, billDate: billDateTxtFld.text!, billType: billTypeTxtFld.text!, providerName: txtFeild1.text!, internetGbUsed: Int(txtFeild2.text!)!)
-            
-            
-            
-           
+   
             
             txtFeild3.isHidden = true
             txtFeild4.isHidden = true
@@ -199,8 +177,7 @@ class AddBillVC : UIViewController, UITextFieldDelegate {
             txtFeild3.placeholder = "mobile number"
             txtFeild4.placeholder = "GB used"
             txtFeild5.placeholder = "minutes used"
-            
-//            m = Mobile(billId: Int(billIdTxtFld.text!)!, billDate: billDateTxtFld.text!, billType: billTypeTxtFld.text!, mobileManufacturerName: txtFeild1.text!, planName: txtFeild2.text!, mobileNumber: txtFeild3.text!, internetGbUsed: Int(txtFeild4.text!)!, minuteUsed: Int(txtFeild5.text!)!)
+  
             
             txtFeild1.isHidden = false
             txtFeild2.isHidden = false
@@ -243,10 +220,8 @@ class AddBillVC : UIViewController, UITextFieldDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
-//    override func viewDidDisappear(_ animated: Bool) {
-//
-//    }
-//
-   
+
+    
+    
     
 }
